@@ -7,8 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="authservice" />
-        <module name="imservice" />
+        <module name="common" />
         <module name="iotim" />
+        <module name="tenantservice" />
       </profile>
     </annotationProcessing>
   </component>

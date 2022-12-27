@@ -5,71 +5,92 @@
     <bookmark url="jar://$MAVEN_REPOSITORY$/com/gree/scm/hibernate3/1.0/hibernate3-1.0.jar!/org/hibernate/Session.class" line="79" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b0d2b38-af40-4996-aad4-5228bcabf9a5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/files/1663059084535.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/FileContentTypeUtils.java" afterDir="false" />
+    <list default="true" id="7b0d2b38-af40-4996-aad4-5228bcabf9a5" name="Default Changelist" comment="fix():optimization the minio aws">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/ImServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/ImServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/client/Client1.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/client/Client1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/client/Client2.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/client/Client2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/client/Client3.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/client/Client3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/client/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/client/NettyClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/client/NettyClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/client/NettyClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/config/MinioConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/config/MinioConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/config/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/config/ResourceServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/client/Client1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/client/Client2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/client/Client3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/client/NettyClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/client/NettyClientHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/config/MinioConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/config/ResourceServerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/config/ThreadPoolConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/ChannelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/ChannelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/TestEndPointController.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/TestEndPointController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/ViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/handler/IMHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/handler/IMHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/handler/SendMessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/handler/SendMessageHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/mq/KafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/mq/KafkaConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/mq/KafkaProducer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/persist/DataBaseStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/persist/DataBaseStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/BaseBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/BaseBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/CreateGroupBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/CreateGroupBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/GroupBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/GroupBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/HeartBeatBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/HeartBeatBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/LoginBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/LoginBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/MsgBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/MsgBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/ReturnVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/ReturnVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/entity/GroupDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/entity/GroupDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/entity/GroupHistoryDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/entity/GroupHistoryDO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/entity/HistoryDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/entity/HistoryDO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/push/PushServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/push/PushServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/CreateGroupRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/CreateGroupRequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/ExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/ExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/GroupMessageRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/GroupMessageRequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/HeartBeatRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/HeartBeatRequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/HttpRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/HttpRequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/MessageRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/MessageRequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/MoquetteIdleTimeoutHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/MoquetteIdleTimeoutHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/NettyServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/NettyServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/NettyServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/ProtocolProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/ProtocolProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/RegisterRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/RegisterRequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/StartCommandLineRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/StartCommandLineRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/ThreadPoolExecutorWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/ThreadPoolExecutorWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/AsyncFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/AsyncFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/Attributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/MinIoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/MinIoUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/SessionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/SessionUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/resources/static/bootstrap/js/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/resources/static/bootstrap/js/chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/test/java/KafkaTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/test/java/KafkaTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/MessageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/TestEndPointController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/ViewController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/handler/IMHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/handler/SendMessageHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/mq/KafkaConsumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/persist/DataBaseStore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/BaseBody.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/Command.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/CreateGroupBody.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/GroupBody.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/HeartBeatBody.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/LoginBody.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/MsgBody.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/ReturnVo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/entity/GroupDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/entity/GroupHistoryDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/entity/HistoryDO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/push/PushServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/CreateGroupRequestHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/ExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/GroupMessageRequestHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/HeartBeatRequestHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/HttpRequestHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/MessageRequestHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/MoquetteIdleTimeoutHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/NettyServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/NettyServerHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/ProtocolProcessor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/RegisterRequestHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/StartCommandLineRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/ThreadPoolExecutorWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/AsyncFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/AsyncManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/Attributes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/FileContentTypeUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/MimeTypeUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/MinIoUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/SessionUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/SnowUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/SpringUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/Threads.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imservice/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/imservice/target/" />
     <ignored path="$PROJECT_DIR$/authservice/target/" />
+    <ignored path="$PROJECT_DIR$/common/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="567243143">
@@ -196,32 +217,52 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1536966082">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="1" />
+          <entry key="java" value="46" />
+          <entry key="xml" value="6" />
+          <entry key="yml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="1" />
+          <entry key="JAVA" value="46" />
+          <entry key="XML" value="6" />
+          <entry key="YAML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="283" />
+          <entry key="xml" value="31" />
+          <entry key="yml" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="283" />
+          <entry key="XML" value="31" />
+          <entry key="YAML" value="3" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/NettyServerHandler.java">
+        <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/ProtocolProcessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/StartCommandLineRunner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="196">
+              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -230,64 +271,88 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/ThreadPoolExecutorWrapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/AsyncManager.java">
+        <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/SaasTenant.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="70">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/AsyncFactory.java">
+        <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/config/SaasConsumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="439">
+              <caret line="36" column="61" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/Attributes.java">
+        <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/ChannelController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/FileContentTypeUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="9" column="36" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/MimeTypeUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+              <caret line="12" column="29" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/ImServiceApplication.java">
+        <entry file="file://$PROJECT_DIR$/imservice/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/dao/SaasOracleDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="98">
+              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/CustomOAuth2RequestFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-121">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/JwtTokenConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -305,8 +370,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>selectGroup</find>
-      <find>channellist</find>
       <find>5px</find>
       <find>na</find>
       <find>channe</find>
@@ -335,6 +398,8 @@
       <find>180686</find>
       <find>9003</find>
       <find>contentType</find>
+      <find>ScmEmailConsumer</find>
+      <find>SendResult</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -352,21 +417,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/StartCommandLineRunner.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/config/MinioConfig.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/MimeTypeUtils.java" />
-        <option value="$PROJECT_DIR$/imservice/pom.xml" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/mq/RocketProducer.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/mq/MsgProducer.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/resources/static/css/signin.css" />
-        <option value="$PROJECT_DIR$/imservice/src/main/resources/static/bootstrap/css/signin.css" />
-        <option value="$PROJECT_DIR$/imservice/src/main/resources/views/login.html" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/CreateGroupRequestPacket.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/CreateGroupBody.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/NettyServer.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/mq/Consumer.java" />
         <option value="$PROJECT_DIR$/imservice/src/main/resources/views/hello.svelte" />
-        <option value="$PROJECT_DIR$/imservice/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/mq/RocketConsumer.java" />
         <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/GroupBody.java" />
         <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/AsyncFactory.java" />
@@ -382,7 +433,6 @@
         <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/HeartBeatBody.java" />
         <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/HeartBeatRequestHandler.java" />
         <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/entity/GroupDTO.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/ChannelController.java" />
         <option value="$PROJECT_DIR$/imservice/src/main/resources/views/chat.html" />
         <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/HttpRequestHandler.java" />
         <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/entity/HistoryDO.java" />
@@ -393,7 +443,6 @@
         <option value="$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/OAuth2AuthorizationServerConfig.java" />
         <option value="$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/dao/ClientDao.java" />
         <option value="$PROJECT_DIR$/authservice/src/main/resources/sql/oracle/auth.sql" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/config/ResourceServerConfig.java" />
         <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/FileContentTypeUtils.java" />
@@ -403,6 +452,22 @@
         <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/mq/KafkaProducer.java" />
         <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/persist/DataBaseStore.java" />
         <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/CreateGroupRequestHandler.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/config/DataSourceConfig.java" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/config/ConsumerConfig.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/config/Consumer.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/config/AbstractErpComsumer.java" />
+        <option value="$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/controller/Test1.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/config/AbstractErpProducer.java" />
+        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/config/ResourceServerConfig.java" />
+        <option value="$PROJECT_DIR$/imservice/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/config/SaasDataSourceFilter.java" />
+        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/ImServiceApplication.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/config/SaasConsumer.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/SaasTenant.java" />
+        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/ChannelController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/imservice/pom.xml" />
       </list>
     </option>
   </component>
@@ -437,14 +502,23 @@
           <item name="imservice" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="iotim" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="iotim" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
       </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="536" />
-    <option name="y" value="112" />
-    <option name="width" value="1208" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="641" />
+    <option name="y" value="40" />
+    <option name="width" value="1227" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -453,332 +527,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="authservice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="authservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="authservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="authservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="authservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="authservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="authservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="authservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="authservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="authservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="authservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="oracle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="authservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="im" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="im" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="im" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="im" type="462c0819:PsiDirectoryNode" />
-              <item name="handler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="im" type="462c0819:PsiDirectoryNode" />
-              <item name="mq" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="im" type="462c0819:PsiDirectoryNode" />
-              <item name="persist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="im" type="462c0819:PsiDirectoryNode" />
-              <item name="pojo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="im" type="462c0819:PsiDirectoryNode" />
-              <item name="pojo" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="im" type="462c0819:PsiDirectoryNode" />
-              <item name="push" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="im" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="im" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iotim2" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -835,6 +583,178 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="authservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="authservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="authservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="authservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="authservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="authservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="authservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="imservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="imservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="imservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="imservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="imservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="imservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -846,34 +766,34 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1663139952106" />
-    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1672135930781" />
+    <property name="last_opened_file_path" value="E:/mqconsole" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\iotim2\imservice\src\main\resources\static\bootstrap\css" />
-      <recent name="E:\iotim2\imservice\src\main\resources\static\js" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.hints.im.pojo.entity" />
-      <recent name="org.hints.im.server" />
-      <recent name="org.hints.im.utils" />
-      <recent name="org.hints.im.config" />
-      <recent name="org.hints.im.controller" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\auth-saas\common\src\main\java\org\hints\common\config" />
       <recent name="E:\iotim2\imservice\src\main\resources\static\bootstrap\fonts" />
       <recent name="E:\iotim2\imservice\src\main\resources\static\img" />
       <recent name="E:\iotim2\imservice\src\main\resources\static\bootstrap\css" />
       <recent name="E:\iotim2\imservice\src\main\resources\static\css" />
-      <recent name="E:\iotim2\imservice\src\main\resources\static" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.hints.common.config" />
+      <recent name="org.hints.im.pojo.entity" />
+      <recent name="org.hints.im.server" />
+      <recent name="org.hints.im.utils" />
+      <recent name="org.hints.im.config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\iotim2\imservice\src\main\resources\static\bootstrap\css" />
+      <recent name="E:\iotim2\imservice\src\main\resources\static\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -888,10 +808,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ImServiceApplication">
+  <component name="RunManager" selected="Spring Boot.AuthApplication">
     <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.hints.im.mq.Consumer" />
-      <module name="imservice" />
+      <module name="tenantservice" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.hints.im.mq.*" />
@@ -904,7 +824,7 @@
     </configuration>
     <configuration name="LoginController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.hints.im.controller.LoginController" />
-      <module name="imservice" />
+      <module name="tenantservice" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.hints.im.controller.*" />
@@ -917,7 +837,7 @@
     </configuration>
     <configuration name="RocketProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.hints.im.mq.RocketProducer" />
-      <module name="imservice" />
+      <module name="tenantservice" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.hints.im.mq.*" />
@@ -941,8 +861,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ImServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="imservice" />
+    <configuration name="ImServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false" temporary="true" nameIsGenerated="true">
+      <module name="tenantservice" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.hints.im.*" />
@@ -966,8 +886,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ImServiceApplication" />
         <item itemvalue="Spring Boot.AuthApplication" />
+        <item itemvalue="Spring Boot.ImServiceApplication" />
         <item itemvalue="Application.LoginController" />
         <item itemvalue="Application.Consumer" />
         <item itemvalue="Application.RocketProducer" />
@@ -1016,6 +936,7 @@
       <workItem from="1662535795197" duration="42779000" />
       <workItem from="1663125743181" duration="2420000" />
       <workItem from="1663137173154" duration="2762000" />
+      <workItem from="1672125142778" duration="10154000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1657795243273</created>
@@ -1232,7 +1153,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="515248000" />
+    <option name="totallyTimeSpent" value="525402000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1244,10 +1165,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
+    <frame x="641" y="40" width="1227" height="1038" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7810858" visible="true" weight="0.21908316" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7810858" visible="true" weight="0.28791773" />
       <window_info id="Structure" order="1" sideWeight="0.21891418" side_tool="true" weight="0.17750533" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -1257,8 +1178,8 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.79288214" weight="0.26789588" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49307036" visible="true" weight="0.33188722" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.79288214" weight="0.26659292" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49307036" visible="true" weight="0.335177" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.329718" />
@@ -1268,7 +1189,7 @@
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3296837" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5075846" side_tool="true" weight="0.3600509" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32321042" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32190266" />
       <window_info anchor="bottom" id="Spring" order="14" />
       <window_info anchor="bottom" id="Java Enterprise" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1278,8 +1199,8 @@
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" weight="0.23779023" />
+      <window_info anchor="right" id="Database" order="7" weight="0.32953548" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.38764045" />
       <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
   </component>
@@ -1393,16 +1314,10 @@
           <option name="timeStamp" value="164" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/TestEndPointController.java</url>
-          <line>108</line>
+          <url>file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/dao/UserDao.java</url>
+          <line>38</line>
           <properties />
-          <option name="timeStamp" value="181" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/TestEndPointController.java</url>
-          <line>124</line>
-          <properties />
-          <option name="timeStamp" value="183" />
+          <option name="timeStamp" value="195" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/controller/TokenController.java</url>
@@ -1420,321 +1335,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/AuthApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/CustomOAuth2RequestFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/dao/ClientDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/model/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/model/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/HttpRequestHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1722">
-          <caret line="146" column="84" selection-start-line="146" selection-start-column="84" selection-end-line="146" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authservice/src/main/resources/sql/oracle/auth.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2044">
-          <caret line="146" column="12" selection-start-line="146" selection-start-column="12" selection-end-line="146" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="32" column="30" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="308">
-            <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/resources/views/chat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="64" column="26" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/MinIoUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="127" column="32" lean-forward="true" selection-start-line="127" selection-start-column="32" selection-end-line="127" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/resources/static/bootstrap/js/chat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-176">
-          <caret line="243" column="17" lean-forward="true" selection-start-line="243" selection-start-column="17" selection-end-line="243" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#a#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/config/MinioConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/config/ResourceServerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/config/ThreadPoolConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/ChannelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-92">
-          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/MessageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="23" selection-start-line="23" selection-end-line="24" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/TestEndPointController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/ViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/handler/IMHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/handler/SendMessageHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/mq/KafkaProducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="44" lean-forward="true" selection-start-line="18" selection-end-line="23" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/mq/KafkaConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="37" column="57" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/persist/DataBaseStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/entity/GroupDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/entity/GroupHistoryDO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/entity/HistoryDO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/BaseBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/CreateGroupBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/GroupBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/HeartBeatBody.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -1810,7 +1410,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/StartCommandLineRunner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="140">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1860,10 +1460,265 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/service/ClientDetailsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/service/UserServiceDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/s.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/config/ConsumerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/controller/Test1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imservice/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="20" column="51" lean-forward="true" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/config/SaasDataSourceFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="74" column="34" selection-start-column="2" selection-end-line="80" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/config/AbstractErpComsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/config/AbstractErpProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/config/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="27" column="80" selection-start-line="27" selection-start-column="80" selection-end-line="27" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/config/DataSourceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/config/DataSourceContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/config/MultiRouteDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/ImServiceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/config/ResourceServerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/MessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/TestEndPointController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="129" column="51" selection-start-line="129" selection-start-column="32" selection-end-line="129" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/dao/SaasTenantDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/dao/ClientDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imservice/src/main/resources/views/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-205" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/JwtTokenEnhancer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/JwtTokenConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/CustomOAuth2RequestFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-121">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/config/SaasConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="36" column="61" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/SaasTenant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/dao/SaasOracleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/ChannelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imservice/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
         </state>
       </provider>
     </entry>
