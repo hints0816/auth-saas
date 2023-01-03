@@ -1,20 +1,19 @@
-package org.hints.im.controller;
+package org.hints.tenant.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.common.message.Message;
 import org.apache.rocketmq.remoting.common.RemotingHelper;
 import org.hints.common.config.AbstractErpProducer;
-import org.hints.common.config.MultiRouteDataSource;
-import org.hints.im.dao.SaasOracleDao;
-import org.hints.im.dao.SaasTenantDao;
-import org.nutz.dao.Dao;
+import org.hints.tenant.service.TenantService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.security.Principal;
+import java.time.LocalDateTime;
+import java.util.HashMap;
 
 /**
  * @Description TODO
@@ -27,26 +26,25 @@ import java.security.Principal;
 public class ChannelController {
 
     @Autowired
-    private Dao dao;
-
-    @Autowired
-    private MultiRouteDataSource dataSource;
-
-    @Autowired
-    private SaasTenantDao saasTenantDao;
-
-    @Autowired
-    private SaasOracleDao saasOracleDao;
+    private TenantService tenantService;
 
     @Autowired
     private AbstractErpProducer abstractErpProducer;
 
     @PostMapping("/create")
     public void create(Principal principal) throws Exception{
+
+        tenantService.create("", "",
+                LocalDateTime.now(), 10L,"");
+
+        HashMap<String,Object> map = new HashMap<>();
+        map.put("clientid","SAAS123123");
+        map.put("password","123456");
+        String jsonString = JSONObject.toJSONString(map);
         Message msg = new Message(
                 "SAAS",
                 null,
-                ("").getBytes(RemotingHelper.DEFAULT_CHARSET)
+                (jsonString).getBytes(RemotingHelper.DEFAULT_CHARSET)
         );
         SendResult sendResult = abstractErpProducer.getProducer().send(msg);
         System.out.printf("%s%n", sendResult);

@@ -3,6 +3,8 @@ package org.hints.auth.service;
 import org.hints.auth.dao.UserDao;
 import org.hints.auth.model.Role;
 import org.hints.auth.model.User;
+import org.hints.common.pojo.SaasTenant;
+import org.hints.common.service.SysUserSaasService;
 import org.nutz.dao.entity.Record;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,9 +14,13 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 
 @Service
@@ -25,13 +31,30 @@ public class UserServiceDetail implements UserDetailsService {
     @Autowired
     private UserDao userDao;
 
+    @Autowired
+    private SysUserSaasService sysUserSaasService;
+
+    private HttpServletRequest getHttpServletRequest() {
+        try {
+            return ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userDao.finduser(username);
-        if (user == null) {
+        String client_id = "";
+        HttpServletRequest httpServletRequest = getHttpServletRequest();
+        if(httpServletRequest != null){
+            client_id = httpServletRequest.getParameter("client_id").toString();
+        }
+        SaasTenant user = sysUserSaasService.findByMobile(username);
+        if(user == null){
             throw new UsernameNotFoundException("用户不存在!");
         }
-        UserDetails userDetails = org.springframework.security.core.userdetails.User.withUsername(user.getUsername())
+        UserDetails userDetails = org.springframework.security.core.userdetails.User.withUsername(username)
                 .password(user.getPassword())
                 .authorities(getAuthorities(username))
                 .build();
@@ -53,14 +76,7 @@ public class UserServiceDetail implements UserDetailsService {
 
     //查询该用户的权限集
     public Collection<? extends GrantedAuthority> getAuthorities(String username) {
-        List<Role> list1 = new ArrayList<Role>();
-        List<Record> list = userDao.getAuth(username);
-        for (Record record : list) {
-            Role role = new Role();
-            role.setRole_id(Long.valueOf(record.getString("role_id")));
-            role.setRoleName(record.getString("role_name"));
-            list1.add(role);
-        }
-        return list1;
+        Collection<GrantedAuthority> collection = new HashSet<>();
+        return collection;
     }
 }

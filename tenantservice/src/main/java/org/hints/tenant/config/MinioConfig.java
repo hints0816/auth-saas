@@ -1,4 +1,4 @@
-package org.hints.im.config;
+package org.hints.tenant.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

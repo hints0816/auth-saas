@@ -3,6 +3,7 @@ package org.hints.common.config;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.client.exception.MQClientException;
+import org.apache.rocketmq.common.protocol.heartbeat.MessageModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -29,6 +30,7 @@ public class Consumer extends AbstractErpComsumer {
         consumer.subscribe(TOPIC, "*");
         consumer.setConsumerGroup(GROUP);
         consumer.setInstanceName(INSTANCE);
+        consumer.setMessageModel(MessageModel.BROADCASTING);
         consumer.registerMessageListener(greeBODTdpur406Listener);
     }
 }
