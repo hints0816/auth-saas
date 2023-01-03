@@ -13,6 +13,7 @@
         <module>tenantservice</module>
         <module>authservice</module>
         <module>common</module>
+        <module>saascommon</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
