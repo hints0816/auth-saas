@@ -9,6 +9,7 @@
         <module name="authservice" />
         <module name="common" />
         <module name="iotim" />
+        <module name="saascommon" />
         <module name="tenantservice" />
       </profile>
     </annotationProcessing>

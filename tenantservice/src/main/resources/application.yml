@@ -26,5 +26,4 @@ security:
   oauth2:
     resource:
       jwt:
-        key-uri: http://localhost:6001/oauth/token_key
         key-value: internet_plus

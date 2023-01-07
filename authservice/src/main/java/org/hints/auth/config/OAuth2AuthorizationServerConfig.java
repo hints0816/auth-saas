@@ -80,9 +80,8 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
         // 允许表单认证
         security
-                .allowFormAuthenticationForClients()
                 .tokenKeyAccess("permitAll()")
-                .checkTokenAccess("permitAll()");
+                .checkTokenAccess("permitAll()").allowFormAuthenticationForClients();
     }
 
     @Bean

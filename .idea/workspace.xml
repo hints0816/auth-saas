@@ -5,73 +5,30 @@
     <bookmark url="jar://$MAVEN_REPOSITORY$/com/gree/scm/hibernate3/1.0/hibernate3-1.0.jar!/org/hibernate/Session.class" line="79" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b0d2b38-af40-4996-aad4-5228bcabf9a5" name="Default Changelist" comment="fix():optimization the minio aws">
+    <list default="true" id="7b0d2b38-af40-4996-aad4-5228bcabf9a5" name="Default Changelist" comment="fix():create the multiple tenants app">
+      <change afterPath="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/controller/SaasCommodityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/CommodityServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/ImServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/ImServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/client/Client1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/client/Client2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/client/Client3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/client/NettyClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/client/NettyClientHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/config/MinioConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/config/ResourceServerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/config/ThreadPoolConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/ChannelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/ChannelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/LoginController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/MessageController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/TestEndPointController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/ViewController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/handler/IMHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/handler/SendMessageHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/mq/KafkaConsumer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/persist/DataBaseStore.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/BaseBody.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/Command.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/CreateGroupBody.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/GroupBody.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/HeartBeatBody.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/LoginBody.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/MsgBody.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/ReturnVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/entity/GroupDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/entity/GroupHistoryDO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/entity/HistoryDO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/push/PushServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/CreateGroupRequestHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/ExceptionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/GroupMessageRequestHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/HeartBeatRequestHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/HttpRequestHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/MessageRequestHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/MoquetteIdleTimeoutHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/NettyServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/NettyServerHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/ProtocolProcessor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/RegisterRequestHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/StartCommandLineRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/ThreadPoolExecutorWrapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/AsyncFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/AsyncManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/Attributes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/FileContentTypeUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/MimeTypeUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/MinIoUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/SessionUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/SnowUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/SpringUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/Threads.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imservice/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/imservice/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/OAuth2AuthorizationServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/OAuth2AuthorizationServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/org/hints/common/config/SaasDataSourceFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/org/hints/common/config/SaasDataSourceFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/SaasTenant.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/SaasTenant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tenantservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tenantservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/controller/SaasCommdityController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/dao/SaasTenantDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/dao/SaasTenantDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/TenantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/TenantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/TenantServiceOracle.java" beforeDir="false" afterPath="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/TenantServiceOracle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tenantservice/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tenantservice/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tenantservice/src/test/java/KafkaTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tenantservice/src/test/java/KafkaTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/imservice/target/" />
     <ignored path="$PROJECT_DIR$/authservice/target/" />
     <ignored path="$PROJECT_DIR$/common/target/" />
+    <ignored path="$PROJECT_DIR$/tenantservice/target/" />
+    <ignored path="$PROJECT_DIR$/saascommon/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,38 +177,50 @@
     <session id="-1536966082">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.38" value="1" />
+          <entry key="project.open.time.4" value="2" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="1" />
-          <entry key="java" value="46" />
-          <entry key="xml" value="6" />
-          <entry key="yml" value="1" />
+          <entry key="class" value="6" />
+          <entry key="html" value="4" />
+          <entry key="java" value="178" />
+          <entry key="md" value="1" />
+          <entry key="xml" value="14" />
+          <entry key="yml" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="1" />
-          <entry key="JAVA" value="46" />
-          <entry key="XML" value="6" />
-          <entry key="YAML" value="1" />
+          <entry key="CLASS" value="6" />
+          <entry key="HTML" value="4" />
+          <entry key="JAVA" value="178" />
+          <entry key="Markdown" value="1" />
+          <entry key="XML" value="14" />
+          <entry key="YAML" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="283" />
-          <entry key="xml" value="31" />
-          <entry key="yml" value="3" />
+          <entry key="dummy" value="9" />
+          <entry key="java" value="1476" />
+          <entry key="txt" value="43" />
+          <entry key="xml" value="36" />
+          <entry key="yml" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="283" />
-          <entry key="XML" value="31" />
-          <entry key="YAML" value="3" />
+          <entry key="JAVA" value="1476" />
+          <entry key="PLAIN_TEXT" value="52" />
+          <entry key="XML" value="36" />
+          <entry key="YAML" value="10" />
         </counts>
       </usages-collector>
     </session>
@@ -259,10 +228,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/dao/UserDao.java">
+        <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/controller/SaasCommodityController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+            <state relative-caret-position="183">
+              <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -271,19 +240,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/SaasTenant.java">
+        <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/SaasCommodity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/config/SaasConsumer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="36" column="61" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+            <state relative-caret-position="-69">
+              <caret line="19" column="45" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -292,10 +252,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/ChannelController.java">
+        <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/CommodityService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
+            <state relative-caret-position="140">
+              <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -304,55 +264,128 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/CommodityServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="12" column="29" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="29" />
+            <state relative-caret-position="365">
+              <caret line="31" column="61" lean-forward="true" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#384#385#0" expanded="true" />
+                <element signature="e#408#409#0" expanded="true" />
+                <element signature="e#485#486#0" expanded="true" />
+                <element signature="e#509#510#0" expanded="true" />
+                <element signature="e#813#814#0" expanded="true" />
+                <element signature="e#828#829#0" expanded="true" />
+                <element signature="e#855#856#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/dao/SaasCommodityDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-191">
+              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1030#1031#0" expanded="true" />
+                <element signature="e#1094#1095#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/controller/ChannelController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="34" column="42" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/imservice/pom.xml">
+        <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/controller/SaasOrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+            <state relative-caret-position="701">
+              <caret line="114" column="24" selection-start-line="114" selection-start-column="24" selection-end-line="114" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2919#2920#0" expanded="true" />
+                <element signature="e#2983#2984#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/dao/SaasOracleDao.java">
+        <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/OrderService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+            <state relative-caret-position="533">
+              <caret line="48" column="71" selection-start-line="48" selection-start-column="71" selection-end-line="48" selection-end-column="71" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/model/User.java">
+        <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/OrderServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+            <state relative-caret-position="238">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#513#514#0" expanded="true" />
+                <element signature="e#540#541#0" expanded="true" />
+                <element signature="e#605#606#0" expanded="true" />
+                <element signature="e#629#630#0" expanded="true" />
+                <element signature="e#719#720#0" expanded="true" />
+                <element signature="e#746#747#0" expanded="true" />
+                <element signature="e#842#843#0" expanded="true" />
+                <element signature="e#869#870#0" expanded="true" />
+                <element signature="e#934#935#0" expanded="true" />
+                <element signature="e#961#962#0" expanded="true" />
+                <element signature="e#1032#1033#0" expanded="true" />
+                <element signature="e#1059#1060#0" expanded="true" />
+                <element signature="e#1135#1136#0" expanded="true" />
+                <element signature="e#1162#1163#0" expanded="true" />
+                <element signature="e#1244#1245#0" expanded="true" />
+                <element signature="e#1271#1272#0" expanded="true" />
+                <element signature="e#1341#1342#0" expanded="true" />
+                <element signature="e#1368#1369#0" expanded="true" />
+                <element signature="e#1435#1436#0" expanded="true" />
+                <element signature="e#1459#1460#0" expanded="true" />
+                <element signature="e#1530#1531#0" expanded="true" />
+                <element signature="e#1554#1555#0" expanded="true" />
+                <element signature="e#1637#1638#0" expanded="true" />
+                <element signature="e#1661#1662#0" expanded="true" />
+                <element signature="e#1723#1724#0" expanded="true" />
+                <element signature="e#1747#1748#0" expanded="true" />
+                <element signature="e#1819#1820#0" expanded="true" />
+                <element signature="e#1843#1844#0" expanded="true" />
+                <element signature="e#1906#1907#0" expanded="true" />
+                <element signature="e#1930#1931#0" expanded="true" />
+                <element signature="e#2017#2018#0" expanded="true" />
+                <element signature="e#2044#2045#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/CustomOAuth2RequestFactory.java">
+        <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/SaasOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-121">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/JwtTokenConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="140">
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -364,25 +397,13 @@
       <list>
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>5px</find>
-      <find>na</find>
-      <find>channe</find>
-      <find>display</find>
-      <find>10px</find>
-      <find>redpo</find>
-      <find>selectChat</find>
-      <find>getElementById</find>
-      <find>sendN</find>
-      <find>show</find>
-      <find>showFriends</find>
-      <find>send</find>
-      <find>viewChannel</find>
       <find>elk1</find>
       <find>showMess</find>
       <find>toUser</find>
@@ -400,12 +421,29 @@
       <find>contentType</find>
       <find>ScmEmailConsumer</find>
       <find>SendResult</find>
+      <find>imservice</find>
+      <find>loginSaas</find>
+      <find>UserServiceDetail</find>
+      <find>comm</find>
+      <find>SaasDataSourceFilter</find>
+      <find>loadUserByUsername</find>
+      <find>saasTenantService</find>
+      <find>AuthorizationServerSecurityConfigurer</find>
+      <find>keyValue</find>
+      <find>getKeyValue</find>
+      <find>Commdity</find>
+      <find>SaasSysOrder</find>
+      <find>saasOrderService</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>SpringUtils</replace>
       <replace>user</replace>
       <replace>hints</replace>
+      <replace>tenantService</replace>
+      <replace>Commodity</replace>
+      <replace>SaasOrder</replace>
+      <replace>orderService</replace>
     </replaceStrings>
     <dirStrings>
       <dir>E:\iotim2\imservice\src\main\resources\static\bootstrap\fonts</dir>
@@ -417,57 +455,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/imservice/src/main/resources/views/hello.svelte" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/mq/RocketConsumer.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/GroupBody.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/AsyncFactory.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/mq/KafkaConsumer.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/GroupController.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/MessageController.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/Attributes.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/SessionUtil.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/MessageRequestHandler.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/RegisterRequestHandler.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/User.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/resources/static/bootstrap/css/dashboard.css" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/HeartBeatBody.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/HeartBeatRequestHandler.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/entity/GroupDTO.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/resources/views/chat.html" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/HttpRequestHandler.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/entity/HistoryDO.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/entity/GroupHistoryDO.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/GroupMessageRequestHandler.java" />
-        <option value="$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/CustomOAuth2RequestFactory.java" />
-        <option value="$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/JwtTokenConfig.java" />
-        <option value="$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/OAuth2AuthorizationServerConfig.java" />
-        <option value="$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/dao/ClientDao.java" />
-        <option value="$PROJECT_DIR$/authservice/src/main/resources/sql/oracle/auth.sql" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/FileContentTypeUtils.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/MinIoUtil.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/resources/static/bootstrap/js/chat.js" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/TestEndPointController.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/mq/KafkaProducer.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/persist/DataBaseStore.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/CreateGroupRequestHandler.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/config/DataSourceConfig.java" />
-        <option value="$PROJECT_DIR$/common/pom.xml" />
-        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/config/ConsumerConfig.java" />
+        <option value="$PROJECT_DIR$/authservice/pom.xml" />
+        <option value="$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/AuthApplication.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/service/SysUserSaasService.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/service/SysUserSaasServiceImpl.java" />
+        <option value="$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/service/UserServiceDetail.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/im/controller/SaasCommdityController.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/im/dao/SaasTenantDao.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/im/dao/SaasOracleDao.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/im/ImServiceApplication.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/im/config/ThreadPoolConfig.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/config/Consumer.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/config/AbstractErpComsumer.java" />
-        <option value="$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/controller/Test1.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/config/AbstractErpProducer.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/config/ResourceServerConfig.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/im/controller/ChannelController.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/SaasOracle.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/SysClient.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/controller/ChannelController.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/service/SysOracleSaasService.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/service/SysOracleSaasServiceImpl.java" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/service/DataBaseSaasService.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/service/DataBaseOracleSaasServiceImpl.java" />
+        <option value="$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/model/Client.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/config/SaasDataSourceFilter.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/ImServiceApplication.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/config/SaasConsumer.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/model/TenantRegisterRequest.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/model/Tenant.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/SaasTenant.java" />
-        <option value="$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/ChannelController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/imservice/pom.xml" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/UserController.java" />
+        <option value="$PROJECT_DIR$/tenantservice/pom.xml" />
+        <option value="$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/OAuth2AuthorizationServerConfig.java" />
+        <option value="$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/utils/SecurityUtil.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/utils/SecurityUtil.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/dao/SaasTenantDao.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/controller/SaasTenantController.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/TenantService.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/TenantServiceOracle.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/ReturnVo.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/TablePageData.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/controller/SaasCommdityController.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/CommdityService.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/dao/SaasCommdity.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/BaseEntity.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/SaasCommodity.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/CommdityServiceImpl.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/dao/SaasCommdityDao.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/CommodityServiceImpl.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/controller/SaasCommodityController.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/SaasOrder.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/OrderService.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/controller/SaasOrderController.java" />
       </list>
     </option>
   </component>
@@ -495,15 +533,6 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="imservice" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="imservice" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="iotim" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
@@ -516,10 +545,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="641" />
+    <option name="x" value="633" />
     <option name="y" value="40" />
-    <option name="width" value="1227" />
-    <option name="height" value="1038" />
+    <option name="width" value="1287" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -527,63 +556,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="iotim2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="imservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="imservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="imservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="imservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="imservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="imservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="bootstrap" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="iotim2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="imservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="bootstrap" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -649,6 +621,24 @@
             <path>
               <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
               <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="authservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="authservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -706,30 +696,33 @@
               <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
               <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
+              <item name="tenantservice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
               <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
+              <item name="tenantservice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
               <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
+              <item name="tenantservice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
               <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
+              <item name="tenantservice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -737,24 +730,141 @@
             <path>
               <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
               <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
+              <item name="tenantservice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tenant" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
               <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
-              <item name="imservice" type="462c0819:PsiDirectoryNode" />
+              <item name="tenantservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tenant" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="tenantservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tenant" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="tenantservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tenant" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="tenantservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tenant" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="tenantservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tenant" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="tenantservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tenant" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auth-saas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auth-saas" type="462c0819:PsiDirectoryNode" />
+              <item name="tenantservice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="iotim2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="imservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="iotim2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="imservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="iotim2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="imservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="iotim2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="imservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="iotim2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="imservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="iotim2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="imservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="bootstrap" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="iotim2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="imservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="bootstrap" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -766,11 +876,11 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1672135930781" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1673088653146" />
     <property name="last_opened_file_path" value="E:/mqconsole" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -785,11 +895,11 @@
       <recent name="E:\iotim2\imservice\src\main\resources\static\css" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.hints.common.pojo" />
+      <recent name="org.hints.tenant.controller" />
+      <recent name="org.hints.im.controller" />
+      <recent name="org.hints.common.service" />
       <recent name="org.hints.common.config" />
-      <recent name="org.hints.im.pojo.entity" />
-      <recent name="org.hints.im.server" />
-      <recent name="org.hints.im.utils" />
-      <recent name="org.hints.im.config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\iotim2\imservice\src\main\resources\static\bootstrap\css" />
@@ -808,7 +918,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AuthApplication">
+  <component name="RunManager" selected="Spring Boot.TenantServiceApplication">
     <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.hints.im.mq.Consumer" />
       <module name="tenantservice" />
@@ -827,7 +937,7 @@
       <module name="tenantservice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.hints.im.controller.*" />
+          <option name="PATTERN" value="org.hints.tenant.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -861,15 +971,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ImServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false" temporary="true" nameIsGenerated="true">
+    <configuration name="TenantServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false" temporary="true" nameIsGenerated="true">
       <module name="tenantservice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.hints.im.*" />
+          <option name="PATTERN" value="org.hints.tenant.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.hints.im.ImServiceApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.hints.tenant.TenantServiceApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateResources" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateResources" />
@@ -882,12 +992,12 @@
       <item itemvalue="Application.Consumer" />
       <item itemvalue="Application.LoginController" />
       <item itemvalue="Spring Boot.AuthApplication" />
-      <item itemvalue="Spring Boot.ImServiceApplication" />
+      <item itemvalue="Spring Boot.TenantServiceApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.TenantServiceApplication" />
         <item itemvalue="Spring Boot.AuthApplication" />
-        <item itemvalue="Spring Boot.ImServiceApplication" />
         <item itemvalue="Application.LoginController" />
         <item itemvalue="Application.Consumer" />
         <item itemvalue="Application.RocketProducer" />
@@ -936,7 +1046,14 @@
       <workItem from="1662535795197" duration="42779000" />
       <workItem from="1663125743181" duration="2420000" />
       <workItem from="1663137173154" duration="2762000" />
-      <workItem from="1672125142778" duration="10154000" />
+      <workItem from="1672125142778" duration="11671000" />
+      <workItem from="1672195798252" duration="4179000" />
+      <workItem from="1672388411782" duration="794000" />
+      <workItem from="1672716767204" duration="11491000" />
+      <workItem from="1672798729328" duration="1050000" />
+      <workItem from="1672912107660" duration="2606000" />
+      <workItem from="1672995969635" duration="6187000" />
+      <workItem from="1673054034075" duration="9595000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1657795243273</created>
@@ -1120,7 +1237,28 @@
       <option name="project" value="LOCAL" />
       <updated>1663126227891</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="fix():create the multiple tenants app">
+      <created>1672136065529</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1672136065529</updated>
+    </task>
+    <task id="LOCAL-00028" summary="fix():create the multiple tenants app">
+      <created>1672740031295</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1672740031295</updated>
+    </task>
+    <task id="LOCAL-00029" summary="fix():optimization">
+      <created>1672740173455</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1672740173455</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1153,7 +1291,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="525402000" />
+    <option name="totallyTimeSpent" value="562821000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1165,10 +1303,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="641" y="40" width="1227" height="1038" extended-state="0" />
+    <frame x="633" y="40" width="1287" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7810858" visible="true" weight="0.28791773" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7810858" visible="true" weight="0.27709863" />
       <window_info id="Structure" order="1" sideWeight="0.21891418" side_tool="true" weight="0.17750533" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -1178,18 +1316,18 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.79288214" weight="0.26659292" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49307036" visible="true" weight="0.335177" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.79288214" weight="0.2660044" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49307036" visible="true" weight="0.32560706" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.329718" />
       <window_info anchor="bottom" id="Sequence Diagram" order="7" weight="0.3296837" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286334" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32671082" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3296837" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5075846" side_tool="true" weight="0.3600509" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32190266" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32119206" />
       <window_info anchor="bottom" id="Spring" order="14" />
       <window_info anchor="bottom" id="Java Enterprise" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1199,8 +1337,8 @@
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Database" order="7" weight="0.32953548" />
-      <window_info anchor="right" id="Maven Projects" order="8" weight="0.38764045" />
+      <window_info anchor="right" id="Database" order="7" weight="0.32919848" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.20858896" />
       <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
   </component>
@@ -1224,7 +1362,6 @@
     <ignored-roots>
       <path value="E:" />
     </ignored-roots>
-    <MESSAGE value="first commit" />
     <MESSAGE value="fix():add some handler" />
     <MESSAGE value="fix():add auth2 module" />
     <MESSAGE value="fix():feat auth2 module" />
@@ -1248,77 +1385,13 @@
     <MESSAGE value="fix():优化" />
     <MESSAGE value="fix():optimization the auth code format" />
     <MESSAGE value="fix():optimization the minio aws" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix():optimization the minio aws" />
+    <MESSAGE value="fix():create the multiple tenants app" />
+    <MESSAGE value="fix():optimization" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix():optimization" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/client/NettyClient.java</url>
-          <line>68</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/MoquetteIdleTimeoutHandler.java</url>
-          <line>26</line>
-          <properties />
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/MoquetteIdleTimeoutHandler.java</url>
-          <line>22</line>
-          <properties />
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/NettyServerHandler.java</url>
-          <line>56</line>
-          <properties />
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/HttpRequestHandler.java</url>
-          <line>110</line>
-          <properties />
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/imservice/src/test/java/KafkaTests.java</url>
-          <line>30</line>
-          <properties />
-          <option name="timeStamp" value="105" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/StartCommandLineRunner.java</url>
-          <line>22</line>
-          <properties />
-          <option name="timeStamp" value="116" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/persist/DataBaseStore.java</url>
-          <line>69</line>
-          <properties />
-          <option name="timeStamp" value="141" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/GroupMessageRequestHandler.java</url>
-          <line>43</line>
-          <properties />
-          <option name="timeStamp" value="153" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/persist/DataBaseStore.java</url>
-          <line>39</line>
-          <properties />
-          <option name="timeStamp" value="164" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/dao/UserDao.java</url>
-          <line>38</line>
-          <properties />
-          <option name="timeStamp" value="195" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/controller/TokenController.java</url>
           <line>17</line>
@@ -1327,319 +1400,193 @@
           </properties>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/controller/ChannelController.java</url>
+          <line>50</line>
+          <properties class="org.hints.tenant.controller.ChannelController">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="201" />
+        </line-breakpoint>
       </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="System.out.println(oAuth2Authentication.getPrincipal());" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>System.out.println(oAuth2Authentication.getPrincipal());</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/HeartBeatBody.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.10.RELEASE/spring-aop-5.0.10.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/LoginBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/pojo/MsgBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/push/PushServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/ExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/CreateGroupRequestHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="16" column="15" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/GroupMessageRequestHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="58" column="36" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/MessageRequestHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="53" column="37" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/NettyServerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/ProtocolProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/StartCommandLineRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/server/ThreadPoolExecutorWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/AsyncManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/AsyncFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/Attributes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/FileContentTypeUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/utils/MimeTypeUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/service/ClientDetailsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        <state relative-caret-position="2226">
+          <caret line="193" selection-start-line="193" selection-end-line="193" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/service/UserServiceDetail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/s.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/config/ConsumerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/controller/Test1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="20" column="51" lean-forward="true" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/config/SaasDataSourceFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="74" column="34" selection-start-column="2" selection-end-line="80" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/config/AbstractErpComsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/config/AbstractErpProducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-            <element signature="e#716#717#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/config/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="27" column="80" selection-start-line="27" selection-start-column="80" selection-end-line="27" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/config/DataSourceConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/config/DataSourceContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/config/MultiRouteDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/ImServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/config/ResourceServerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/MessageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/TestEndPointController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="129" column="51" selection-start-line="129" selection-start-column="32" selection-end-line="129" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/dao/SaasTenantDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/SecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        <state relative-caret-position="364">
+          <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/dao/ClientDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="182">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/resources/views/login.html">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-205" />
+        <state relative-caret-position="700">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/JwtTokenEnhancer.java">
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/SaasOracle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/service/DataBaseSaasService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/model/Client.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/model/Tenant.java" />
+    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/AuthApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authservice/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tenantservice/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1848">
+          <caret line="132" column="21" selection-start-line="132" selection-start-column="21" selection-end-line="132" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/service/ClientDetailsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/nutz/nutz/1.r.67/nutz-1.r.67-sources.jar!/org/nutz/dao/impl/sql/run/NutDaoRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/5.0.10.RELEASE/spring-jdbc-5.0.10.RELEASE.jar!/org/springframework/jdbc/datasource/lookup/AbstractRoutingDataSource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="81" column="45" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/nutz/nutz/1.r.67/nutz-1.r.67-sources.jar!/org/nutz/dao/impl/DaoRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/nutz/nutz/1.r.67/nutz-1.r.67-sources.jar!/org/nutz/dao/impl/DaoSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="239" selection-start-line="239" selection-end-line="239" />
+          <folding>
+            <element signature="e#6416#6417#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/nutz/nutz/1.r.67/nutz-1.r.67-sources.jar!/org/nutz/dao/impl/NutDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="489" column="9" lean-forward="true" selection-start-line="489" selection-start-column="9" selection-end-line="489" selection-end-column="9" />
+          <folding>
+            <element signature="e#16315#16316#0" expanded="true" />
+            <element signature="e#16382#16383#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/druid/1.0.27/druid-1.0.27-sources.jar!/com/alibaba/druid/pool/DruidDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="983" selection-start-line="983" selection-end-line="983" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/nutz/nutz/1.r.67/nutz-1.r.67-sources.jar!/org/nutz/dao/Dao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="404" column="16" selection-start-line="404" selection-start-column="16" selection-end-line="404" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/boot/spring-security-oauth2-autoconfigure/2.0.1.RELEASE/spring-security-oauth2-autoconfigure-2.0.1.RELEASE.jar!/org/springframework/boot/autoconfigure/security/oauth2/resource/ResourceServerProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="104" column="5" lean-forward="true" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
+          <folding>
+            <element signature="e#2555#2556#0" expanded="true" />
+            <element signature="e#2594#2595#0" expanded="true" />
+            <element signature="e#6199#6200#0" expanded="true" />
+            <element signature="e#6247#6248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/CustomOAuth2RequestFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1650,17 +1597,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/CustomOAuth2RequestFactory.java">
+    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/SecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-121">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="239">
+          <caret line="42" column="41" lean-forward="true" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/config/SaasConsumer.java">
+    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/JwtTokenEnhancer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="36" column="61" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+        <state relative-caret-position="224">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/config/OAuth2AuthorizationServerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-139">
+          <caret line="46" column="34" lean-forward="true" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#489#490#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/config/SaasDataSourceFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/service/DataBaseOracleSaasServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/service/SysUserSaasServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tenantservice/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/model/JwtInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/utils/SecurityUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1669,56 +1683,224 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/SaasTenant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        <state relative-caret-position="98">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/model/User.java">
+    <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/dao/SaasTenantDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        <state relative-caret-position="280">
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/dao/SaasOracleDao.java">
+    <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/controller/SaasTenantController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="28" column="30" lean-forward="true" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1116#1117#0" expanded="true" />
+            <element signature="e#1143#1144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/TenantService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/TenantServiceOracle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="29" selection-start-line="29" selection-end-line="29" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/TablePageData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="98">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authservice/src/main/java/org/hints/auth/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/src/main/java/org/hints/im/controller/ChannelController.java">
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/ReturnVo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="266">
+          <caret line="54" column="34" lean-forward="true" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/dao/SaasOracleDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="29" />
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imservice/pom.xml">
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/BaseEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        <state relative-caret-position="112">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/SaasCommodity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-69">
+          <caret line="19" column="45" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/CommodityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/dao/SaasCommodityDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-191">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1030#1031#0" expanded="true" />
+            <element signature="e#1094#1095#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/CommodityServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="31" column="61" lean-forward="true" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#408#409#0" expanded="true" />
+            <element signature="e#485#486#0" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#813#814#0" expanded="true" />
+            <element signature="e#828#829#0" expanded="true" />
+            <element signature="e#855#856#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/controller/SaasCommodityController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/controller/ChannelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="34" column="42" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/hints/common/pojo/SaasOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="48" column="71" selection-start-line="48" selection-start-column="71" selection-end-line="48" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/service/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#513#514#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#842#843#0" expanded="true" />
+            <element signature="e#869#870#0" expanded="true" />
+            <element signature="e#934#935#0" expanded="true" />
+            <element signature="e#961#962#0" expanded="true" />
+            <element signature="e#1032#1033#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+            <element signature="e#1135#1136#0" expanded="true" />
+            <element signature="e#1162#1163#0" expanded="true" />
+            <element signature="e#1244#1245#0" expanded="true" />
+            <element signature="e#1271#1272#0" expanded="true" />
+            <element signature="e#1341#1342#0" expanded="true" />
+            <element signature="e#1368#1369#0" expanded="true" />
+            <element signature="e#1435#1436#0" expanded="true" />
+            <element signature="e#1459#1460#0" expanded="true" />
+            <element signature="e#1530#1531#0" expanded="true" />
+            <element signature="e#1554#1555#0" expanded="true" />
+            <element signature="e#1637#1638#0" expanded="true" />
+            <element signature="e#1661#1662#0" expanded="true" />
+            <element signature="e#1723#1724#0" expanded="true" />
+            <element signature="e#1747#1748#0" expanded="true" />
+            <element signature="e#1819#1820#0" expanded="true" />
+            <element signature="e#1843#1844#0" expanded="true" />
+            <element signature="e#1906#1907#0" expanded="true" />
+            <element signature="e#1930#1931#0" expanded="true" />
+            <element signature="e#2017#2018#0" expanded="true" />
+            <element signature="e#2044#2045#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tenantservice/src/main/java/org/hints/tenant/controller/SaasOrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="701">
+          <caret line="114" column="24" selection-start-line="114" selection-start-column="24" selection-end-line="114" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2919#2920#0" expanded="true" />
+            <element signature="e#2983#2984#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1774,7 +1956,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>imservice</last-edited>
+          <last-edited>saascommon</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

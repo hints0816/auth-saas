@@ -55,8 +55,7 @@ public class SaasDataSourceFilter extends OncePerRequestFilter {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if(authentication instanceof OAuth2Authentication){
             oAuth2Authentication = (OAuth2Authentication)authentication;
-            LinkedHashMap<String,Object> map = (LinkedHashMap<String, Object>) oAuth2Authentication.getUserAuthentication().getDetails();
-            clientId = map.get("client_id")==null?"":map.get("client_id").toString();
+            clientId = oAuth2Authentication.getOAuth2Request().getClientId();
         }
         DataSourceContext.setDBType("gscm_client");
         SaasOracle saasOracle = dataBaseSaasService.selectSaasOracleByClientId(clientId);
