@@ -4,7 +4,7 @@ import lombok.Data;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hints.auth.dao.ClientDao;
-import org.hints.auth.model.Client;
+import org.hints.common.pojo.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.oauth2.common.exceptions.InvalidClientException;

@@ -1,5 +1,8 @@
 package org.hints.tenant.dao;
 
+import org.hints.common.pojo.SaasOracle;
+import org.nutz.dao.Dao;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -9,4 +12,13 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class SaasOracleDao {
+
+    @Autowired
+    private Dao dao;
+
+    public SaasOracle insertSaasOracle(SaasOracle saasOracle){
+        SaasOracle insert = dao.insert(saasOracle);
+        return insert;
+    }
+
 }

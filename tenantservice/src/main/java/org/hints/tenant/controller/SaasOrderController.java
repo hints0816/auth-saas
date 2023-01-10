@@ -10,72 +10,47 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletResponse;
 
 @RestController
-@RequestMapping("/saas/tenant/order")
+@RequestMapping("/order")
 public class SaasOrderController {
 
     @Autowired
     private OrderService orderService;
 
-    /**
-     * 查询系统订单信息列表(租户使用)
-     * @param SaasOrder
-     * @return
-     */
     @GetMapping(value = "/list")
     public ReturnVo<TablePageData<SaasOrder>> listOnUser(SaasOrder SaasOrder) {
         TablePageData<SaasOrder> SaasOrderTablePageData = orderService.selectOrderPageOnUser(SaasOrder);
         return ReturnVo.success(SaasOrderTablePageData);
     }
 
-    /**
-     * 获取系统订单信息详细信息(租户使用)
-     * @param orderNo
-     * @return
-     */
     @GetMapping(value = "/{orderNo}")
     public ReturnVo getInfo(@PathVariable("orderNo") String orderNo)
     {
         return ReturnVo.success(orderService.getOrderNoOnUser(orderNo));
     }
 
-    /**
-     * 获取系统订单信息详细信息(流水号)(租户)
-     */
     @GetMapping(value = "/out_trade_no/{outTradeNo}")
     public ReturnVo getInfoByTradeNoOrder(@PathVariable("outTradeNo") String outTradeNo)
     {
         return ReturnVo.success(orderService.getOutTradeNoOrderOnUser(outTradeNo));
     }
 
-    /**
-     * 检查商品状态
-     */
     @GetMapping("/check")
     public ReturnVo getCheckOutTradeNo(@RequestParam("group_id") String groupId) {
         return ReturnVo.success(orderService.getCheckOutTradeNo(groupId));
     }
 
-    /**
-     * 提交订单
-     */
     @PostMapping(value = "/submit")
     public ReturnVo insert(@RequestBody SaasOrder SaasOrder){
         SaasOrder result = orderService.saveOrder(SaasOrder);
         return ReturnVo.success(result);
     }
 
-    /**
-     * 修改系统订单信息
-     */
     @PutMapping
     public ReturnVo edit(@RequestBody SaasOrder SaasOrder)
     {
         return ReturnVo.toAjax(orderService.updateOrder(SaasOrder));
     }
 
-    /**
-     * 关闭订单信息(租户)
-     */
     @DeleteMapping("/close/{orderNos}")
     public ReturnVo close(@PathVariable String[] orderNos)
     {

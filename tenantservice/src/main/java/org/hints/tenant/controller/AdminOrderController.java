@@ -1,0 +1,55 @@
+package org.hints.tenant.controller;
+
+import org.hints.common.pojo.ReturnVo;
+import org.hints.common.pojo.SaasOrder;
+import org.hints.common.pojo.TablePageData;
+import org.hints.tenant.service.OrderService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/saas/admin/order")
+public class AdminOrderController {
+
+    @Autowired
+    private OrderService orderService;
+
+    /**
+     * 查询系统订单信息列表
+     */
+    @GetMapping("/list")
+    public ReturnVo<TablePageData<SaasOrder>> list(SaasOrder saasOrder) {
+        TablePageData<SaasOrder> saasOrderTablePageData = orderService.selectOrderPage(saasOrder);
+        return ReturnVo.success(saasOrderTablePageData);
+    }
+
+    /**
+     * 获取系统订单信息详细信息
+     */
+    @GetMapping(value = "/{orderNo}")
+    public ReturnVo getInfo(@PathVariable("orderNo") String orderNo)
+    {
+        return ReturnVo.success(orderService.getOrderNo(orderNo));
+    }
+
+    /**
+     * 审批
+     * @param orderNo
+     * @param orderStatus 2:通过3:拒绝
+     * @return
+     */
+    @PutMapping(value = "/status")
+    public ReturnVo updateStatusOrder(@RequestParam String orderNo, @RequestParam int orderStatus){
+        return ReturnVo.toAjax(orderService.updateStatusOrder(orderNo,orderStatus));
+    }
+
+    /**
+     * 删除订单
+     */
+    @DeleteMapping("/{orderNos}")
+    public ReturnVo remove(@PathVariable String[] orderNos)
+    {
+        return ReturnVo.toAjax(orderService.delOrderNos(orderNos));
+    }
+
+}

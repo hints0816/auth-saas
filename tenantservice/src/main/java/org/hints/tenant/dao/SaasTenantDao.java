@@ -25,4 +25,9 @@ public class SaasTenantDao {
         return update;
     }
 
+    public SaasTenant selectSaasSysTenantById(String tenantId){
+        SaasTenant fetch = dao.fetch(SaasTenant.class, tenantId);
+        return fetch;
+    }
+
 }

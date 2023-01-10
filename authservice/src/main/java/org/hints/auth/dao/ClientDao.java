@@ -1,6 +1,6 @@
 package org.hints.auth.dao;
 
-import org.hints.auth.model.Client;
+import org.hints.common.pojo.Client;
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
 import org.springframework.beans.factory.annotation.Autowired;

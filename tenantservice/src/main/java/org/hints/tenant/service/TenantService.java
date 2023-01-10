@@ -2,6 +2,7 @@ package org.hints.tenant.service;
 
 import org.hints.common.pojo.ReturnVo;
 import org.hints.common.pojo.SaasTenant;
+import org.hints.tenant.model.BeTenantVO;
 
 import java.io.UnsupportedEncodingException;
 import java.time.LocalDateTime;
@@ -13,12 +14,12 @@ import java.time.LocalDateTime;
  */
 public interface TenantService {
 
-    void create(String tenantid, String groupId, LocalDateTime plus, Long maxSiteNum, String addon);
-
     ReturnVo register(SaasTenant saasTenant);
 
     ReturnVo reset(SaasTenant saasTenant);
 
     SaasTenant fetchTenantInfo() throws UnsupportedEncodingException;
+
+    String toBeTenant(BeTenantVO beTenantVO);
 
 }

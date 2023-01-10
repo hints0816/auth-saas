@@ -1,13 +1,16 @@
 package org.hints.tenant.utils;
 
+import com.alibaba.fastjson.JSONObject;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import org.apache.commons.lang3.StringUtils;
+import org.hints.common.pojo.CusUser;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
+import java.util.LinkedHashMap;
 
 /**
  * @Description TODO
@@ -16,14 +19,21 @@ import java.io.UnsupportedEncodingException;
  */
 public class SecurityUtil {
 
-    public static Claims getJwtInfo() throws UnsupportedEncodingException {
+    public static CusUser getJwtInfo() {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         String header = request.getHeader("Authorization");
         String token = StringUtils.substringAfter(header, "Bearer ");
-        Claims claims = Jwts.parser()
-                .setSigningKey("internet_plus".getBytes("utf-8"))
-                .parseClaimsJws(token).getBody();
-        return claims;
+        Claims claims = null;
+        try {
+            claims = Jwts.parser()
+                    .setSigningKey("internet_plus".getBytes("utf-8"))
+                    .parseClaimsJws(token).getBody();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        LinkedHashMap o = (LinkedHashMap) claims.get("user");
+        CusUser cusUser = JSONObject.parseObject(JSONObject.toJSONString(o), CusUser.class);
+        return cusUser;
     }
 
 }

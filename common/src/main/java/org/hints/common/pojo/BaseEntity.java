@@ -17,4 +17,26 @@ public class BaseEntity implements Serializable {
     @JsonIgnore
     private Integer pageSize;
 
+    public Integer getPageNum() {
+        return pageNum==null?1:pageNum;
+    }
+
+    public void setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+    }
+
+    public Integer getPageSize() {
+        return pageSize==null?20:pageSize;
+    }
+
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    public void setNull() {
+        this.searchValue = null;
+        this.pageNum = null;
+        this.pageSize = null;
+    }
+
 }

@@ -1,4 +1,4 @@
-package org.hints.auth.model;
+package org.hints.common.pojo;
 
 import lombok.Data;
 import org.nutz.dao.entity.annotation.Column;

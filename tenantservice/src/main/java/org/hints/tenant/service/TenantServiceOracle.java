@@ -1,12 +1,19 @@
 package org.hints.tenant.service;
 
+import com.alibaba.fastjson.JSONObject;
 import io.jsonwebtoken.Claims;
+import org.apache.rocketmq.client.producer.SendResult;
+import org.apache.rocketmq.common.message.Message;
+import org.apache.rocketmq.remoting.common.RemotingHelper;
+import org.hints.common.config.AbstractErpProducer;
 import org.hints.common.config.MultiRouteDataSource;
 import org.hints.common.pojo.ReturnVo;
 import org.hints.common.pojo.SaasOracle;
 import org.hints.common.pojo.SaasTenant;
 import org.hints.common.pojo.SysClient;
+import org.hints.tenant.dao.SaasOracleDao;
 import org.hints.tenant.dao.SaasTenantDao;
+import org.hints.tenant.model.BeTenantVO;
 import org.hints.tenant.utils.SecurityUtil;
 import org.nutz.dao.Dao;
 import org.nutz.dao.Sqls;
@@ -20,6 +27,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.UnsupportedEncodingException;
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -39,9 +47,56 @@ public class TenantServiceOracle implements TenantService{
     @Autowired
     private MultiRouteDataSource dataSource;
 
-    @Override
-    public void create(String tenantid, String groupId, LocalDateTime plus, Long maxSiteNum, String addon) {
+    @Autowired
+    private SaasOracleDao saasOracleDao;
 
+    @Autowired
+    private AbstractErpProducer abstractErpProducer;
+
+    @Override
+    public ReturnVo register(SaasTenant saasTenant) {
+        SaasTenant saasTenant1 = saasTenantDao.selectSaasSysTenantByMobile(saasTenant.getMobile());
+        if(saasTenant1 != null) {
+            return ReturnVo.error("account is existed");
+        }
+        //生成随机的用户ID
+        long randomtime=System.currentTimeMillis();
+        String randomtimestr = Long.toString(randomtime);
+        int rannum = (int) (Math.random()*90 + 10);
+        String rannumstr = Integer.toString(rannum);
+        String sysuid = randomtimestr+rannumstr;
+        //用户ID和租户ID一样，设置状态(1:正常)
+        saasTenant.setSysUid(sysuid);
+        saasTenant.setCreate_time(LocalDateTime.now());
+        saasTenant.setTenant_id(sysuid);
+        saasTenant.setStatus(1L);
+        //BCrypt密码加密
+        String finalSecret = new BCryptPasswordEncoder().encode(saasTenant.getPassword());
+        saasTenant.setPassword(finalSecret);
+        SaasTenant result = dao.insert(saasTenant);
+        return ReturnVo.success();
+    }
+
+    @Override
+    public ReturnVo reset(SaasTenant saasTenant) {
+        String mobile = SecurityUtil.getJwtInfo().getPhonenumber();
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        String finalSecret = encoder.encode(saasTenant.getPassword());
+        saasTenantDao.updateSaasTenantPassword(mobile, finalSecret);
+        return ReturnVo.success();
+    }
+
+    @Override
+    public SaasTenant fetchTenantInfo() throws UnsupportedEncodingException {
+        String mobile = SecurityUtil.getJwtInfo().getPhonenumber();
+        SaasTenant saasTenant = saasTenantDao.selectSaasSysTenantByMobile(mobile);
+        saasTenant.setPassword(null);
+        return saasTenant;
+    }
+
+    @Override
+    public String toBeTenant(BeTenantVO beTenantVO) {
+        SaasTenant saasTenant = saasTenantDao.selectSaasSysTenantById(beTenantVO.getTenantid());
         /*生成随机ClientId = oracle数据库用户 (dba对greescmdb2创建的saas开头的20位用户名处理)*/
         long randomtime=System.currentTimeMillis();
         String randomtimestr = Long.toString(randomtime);
@@ -64,8 +119,9 @@ public class TenantServiceOracle implements TenantService{
         sql2.setEntity(dao.getEntity(Record.class));
         List<Record> alltabledatas = dao.execute(sql2).getList(Record.class);
         if(alltabledatas.size()>0){
-            return;
+            return null;
         }
+        /*创建数据库User*/
         Dao dao2 = new NutDao(dataSource,new FileSqlManager("sql/createuser.sqls"));
         String[] keys = dao2.sqls().keys();
         for(String key : keys) {
@@ -112,59 +168,33 @@ public class TenantServiceOracle implements TenantService{
         saasOracle.setId(id);
         saasOracle.setClientId(clientid);
         saasOracle.setCreate_time(LocalDateTime.now());
-        saasOracle.setExpireTime(plus);
-        saasOracle.setGroupId(groupId);
-        saasOracle.setMaxSiteNum(maxSiteNum);
+        saasOracle.setExpireTime(beTenantVO.getPlus());
+        saasOracle.setGroupId(beTenantVO.getGroupId());
+        saasOracle.setMaxSiteNum(beTenantVO.getMaxSiteNum());
         saasOracle.setSiteNum(0L);
-        saasOracle.setTenant_id(tenantid);
+        saasOracle.setTenant_id(beTenantVO.getTenantid());
         saasOracle.setStatus(1L);
         saasOracle.setPassword(finalSecret);
-        dao.insert(saasOracle);
-    }
+        saasOracleDao.insertSaasOracle(saasOracle);
 
-    @Override
-    public ReturnVo register(SaasTenant saasTenant) {
-        SaasTenant saasTenant1 = saasTenantDao.selectSaasSysTenantByMobile(saasTenant.getMobile());
-        if(saasTenant1 != null) {
-            return ReturnVo.error("account is existed");
-        }
-        //生成随机的用户ID
-        long randomtime=System.currentTimeMillis();
-        String randomtimestr = Long.toString(randomtime);
-        int rannum = (int) (Math.random()*90 + 10);
-        String rannumstr = Integer.toString(rannum);
-        String sysuid = randomtimestr+rannumstr;
-        //用户ID和租户ID一样，设置状态(1:正常)
-        saasTenant.setSysUid(sysuid);
-        saasTenant.setCreate_time(LocalDateTime.now());
-        saasTenant.setTenant_id(sysuid);
-        saasTenant.setStatus(1L);
-        //BCrypt密码加密
-        String finalSecret = new BCryptPasswordEncoder().encode(saasTenant.getPassword());
-        saasTenant.setPassword(finalSecret);
-        SaasTenant result = dao.insert(saasTenant);
-        return ReturnVo.success();
-    }
+        HashMap<String,Object> map = new HashMap<String, Object>();
+        map.put("clientid",clientid);
+        map.put("password","123456");
 
-    @Override
-    public ReturnVo reset(SaasTenant saasTenant) {
+        /*装载数据源*/
+        String jsonString = JSONObject.toJSONString(map);
+        Message msg = null;
         try {
-            String mobile = SecurityUtil.getJwtInfo().get("user_name").toString();
-
-            BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-            String finalSecret = encoder.encode(saasTenant.getPassword());
-            saasTenantDao.updateSaasTenantPassword(mobile, finalSecret);
-        } catch (UnsupportedEncodingException e) {
+            msg = new Message(
+                    "SAAS",
+                    null,
+                    (jsonString).getBytes(RemotingHelper.DEFAULT_CHARSET)
+            );
+            SendResult sendResult = abstractErpProducer.getProducer().send(msg);
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        return ReturnVo.success();
-    }
 
-    @Override
-    public SaasTenant fetchTenantInfo() throws UnsupportedEncodingException {
-        String mobile = SecurityUtil.getJwtInfo().get("user_name").toString();
-        SaasTenant saasTenant = saasTenantDao.selectSaasSysTenantByMobile(mobile);
-        saasTenant.setPassword(null);
-        return saasTenant;
+        return id;
     }
 }

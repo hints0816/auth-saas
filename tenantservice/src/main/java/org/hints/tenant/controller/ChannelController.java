@@ -34,20 +34,20 @@ public class ChannelController {
     @PostMapping("/create")
     public void create(Principal principal) throws Exception{
 
-        tenantService.create("", "",
-                LocalDateTime.now(), 10L,"");
-
-        HashMap<String,Object> map = new HashMap<>();
-        map.put("clientid","SAAS123123");
-        map.put("password","123456");
-        String jsonString = JSONObject.toJSONString(map);
-        Message msg = new Message(
-                "SAAS",
-                null,
-                (jsonString).getBytes(RemotingHelper.DEFAULT_CHARSET)
-        );
-        SendResult sendResult = abstractErpProducer.getProducer().send(msg);
-        System.out.printf("%s%n", sendResult);
+//        tenantService.create("", "",
+//                LocalDateTime.now(), 10L,"");
+//
+//        HashMap<String,Object> map = new HashMap<>();
+//        map.put("clientid","SAAS123123");
+//        map.put("password","123456");
+//        String jsonString = JSONObject.toJSONString(map);
+//        Message msg = new Message(
+//                "SAAS",
+//                null,
+//                (jsonString).getBytes(RemotingHelper.DEFAULT_CHARSET)
+//        );
+//        SendResult sendResult = abstractErpProducer.getProducer().send(msg);
+//        System.out.printf("%s%n", sendResult);
     }
 
 }

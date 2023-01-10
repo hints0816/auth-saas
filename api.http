@@ -1,0 +1,26 @@
+### Get Token
+# @name loginAdmin
+GET http://localhost:6002/oauth/token?username=18088824610&password=Qwe!2345&grant_type=password&client_id=saas_client&client_secret=123456 HTTP/1.1
+
+### commodity query
+GET http://localhost:8084/tenant/me HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+
+### commodity query
+GET http://localhost:8084/commodity/list HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+
+### order check
+GET http://localhost:8084/order/check?group_id=ecc4ccb29f2faefb HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+
+### order sumbit
+POST  http://localhost:8084/order/submit HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+content-type: application/json
+
+{"groupId":"ecc4ccb29f2faefb","groupPeriodNum":1}
+
+### order list
+GET http://localhost:8084/order/list?pageNum=1&pageSize=10&order_no=&orderStatus= HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
