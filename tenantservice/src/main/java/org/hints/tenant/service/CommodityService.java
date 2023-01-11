@@ -22,4 +22,6 @@ public interface CommodityService {
 
     TablePageData<SaasCommodity> queryPageCommodityOnUser(SaasCommodity saasCommodity);
 
+    int deleteCommodity(String[] ids);
+
 }

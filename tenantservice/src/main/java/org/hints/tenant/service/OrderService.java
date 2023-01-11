@@ -26,13 +26,9 @@ public interface OrderService {
 
     SaasOrder getOrderNoOnUser(String orderNO);
 
-    SaasOrder getOutTradeNoOrder(String outTradeNo);
-
     SaasOrder getOutTradeNoOrderOnUser(String outTradeNo);
 
     String getCheckOutTradeNo(String groupId);
-
-    int updateDelOrderById(String orderNo);
 
     int updateDelOrderByIds(String[] orderNos);
 

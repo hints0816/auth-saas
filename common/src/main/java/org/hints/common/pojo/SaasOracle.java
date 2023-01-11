@@ -19,7 +19,7 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 @Table("SAAS_SYS_ORACLE")
-public class SaasOracle {
+public class SaasOracle extends BaseEntity{
 
     /** ORACLE USERNAME */
     @Name

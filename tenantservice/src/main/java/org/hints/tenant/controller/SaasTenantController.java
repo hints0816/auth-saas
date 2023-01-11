@@ -7,9 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.UnsupportedEncodingException;
-import java.security.Principal;
-
 @RestController
 @RequestMapping("/tenant")
 public class SaasTenantController {
@@ -28,9 +25,9 @@ public class SaasTenantController {
     }
 
     @GetMapping(value = "/me")
-    public SaasTenant getInfo(Principal principal) throws UnsupportedEncodingException {
+    public ReturnVo getInfo() {
         SaasTenant saasTenant = tenantService.fetchTenantInfo();
-        return saasTenant;
+        return ReturnVo.success(saasTenant);
     }
 
 }

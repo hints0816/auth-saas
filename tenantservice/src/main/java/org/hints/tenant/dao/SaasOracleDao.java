@@ -1,9 +1,15 @@
 package org.hints.tenant.dao;
 
 import org.hints.common.pojo.SaasOracle;
+import org.hints.common.pojo.TablePageData;
+import org.nutz.dao.Chain;
+import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
+import org.nutz.dao.pager.Pager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * @Description TODO
@@ -19,6 +25,32 @@ public class SaasOracleDao {
     public SaasOracle insertSaasOracle(SaasOracle saasOracle){
         SaasOracle insert = dao.insert(saasOracle);
         return insert;
+    }
+
+    public SaasOracle selectSaasOracleById(String id){
+        SaasOracle fetch = dao.fetch(SaasOracle.class, id);
+        return fetch;
+    }
+
+    public int updateSaasOracle(SaasOracle saasOracle){
+        int update = dao.update(saasOracle);
+        return update;
+    }
+
+    public TablePageData<SaasOracle> selectSaasOracleList(SaasOracle saasOracle){
+        Pager pager = dao.createPager(saasOracle.getPageNum(), saasOracle.getPageSize());
+        saasOracle.setNull();
+        Cnd cnd = Cnd.from(dao,saasOracle);
+        List query = dao.query(SaasOracle.class, cnd, pager);
+        pager.setRecordCount(dao.count(SaasOracle.class, cnd));
+        TablePageData<SaasOracle> tablePageData = new TablePageData(query, pager);
+        return tablePageData;
+    }
+
+    public int updateSiteNumSaasOracle(String id){
+        int update = dao.update(SaasOracle.class, Chain.makeSpecial("site_num",
+                "+1").add("domain", "http://user.scmaction.gree.com/#/login/"+id), Cnd.where("id","=", id));
+        return update;
     }
 
 }

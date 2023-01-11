@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 @Table("SAAS_SYS_TENANT")
-public class SaasTenant {
+public class SaasTenant extends BaseEntity{
 
     @Name
     private String tenant_id;

@@ -7,6 +7,7 @@ import org.hints.common.pojo.TablePageData;
 import org.hints.common.utils.UUIDUtil;
 import org.hints.tenant.dao.SaasCommodityDao;
 import org.hints.tenant.dao.SaasOrderDao;
+import org.hints.tenant.model.BeTenantVO;
 import org.hints.tenant.utils.SecurityUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -74,7 +75,7 @@ public class OrderServiceImpl implements OrderService{
 
     @Override
     public int updateOrder(SaasOrder SaasOrder) {
-        return 0;
+        return saasOrderDao.updateSaasOrder(SaasOrder);
     }
 
     @Override
@@ -93,39 +94,42 @@ public class OrderServiceImpl implements OrderService{
 
     @Override
     public SaasOrder getOrderNo(String orderNO) {
-        return null;
+        SaasOrder orderNoIdOrder = saasOrderDao.getOrderNoIdOrder(orderNO);
+        return orderNoIdOrder;
     }
 
     @Override
     public SaasOrder getOrderNoOnUser(String orderNO) {
-        return null;
-    }
-
-    @Override
-    public SaasOrder getOutTradeNoOrder(String outTradeNo) {
-        return null;
+        String tenantId = SecurityUtil.getJwtInfo().getUser_id().toString();
+        SaasOrder orderNoIdOrder = saasOrderDao.getOrderNoIdOrder(orderNO);
+        return orderNoIdOrder.getTenantId().equals(tenantId)?orderNoIdOrder:null;
     }
 
     @Override
     public SaasOrder getOutTradeNoOrderOnUser(String outTradeNo) {
-        return null;
+        String tenantId = SecurityUtil.getJwtInfo().getUser_id().toString();
+        SaasOrder outTradeNoOrder = saasOrderDao.getOutTradeNoOrder(outTradeNo);
+        return outTradeNoOrder.getTenantId().equals(tenantId)?outTradeNoOrder:null;
     }
 
     @Override
     public String getCheckOutTradeNo(String groupId) {
-        Long tenantid = SecurityUtil.getJwtInfo().getUser_id();
-        List<SaasOrder> checkOutTradeNo = saasOrderDao.getCheckOutTradeNo(String.valueOf(tenantid), 1, 1, groupId);
+        String tenantId = SecurityUtil.getJwtInfo().getUser_id().toString();
+        List<SaasOrder> checkOutTradeNo = saasOrderDao.getCheckOutTradeNo(tenantId, 1, 1, groupId);
         return checkOutTradeNo.size()>0?checkOutTradeNo.get(0).getOrder_no():null;
     }
 
     @Override
-    public int updateDelOrderById(String orderNo) {
-        return 0;
-    }
-
-    @Override
     public int updateDelOrderByIds(String[] orderNos) {
-        return 0;
+        //TODO 关闭订单检查是否本人订单（后续优化）
+        Long tenantId = SecurityUtil.getJwtInfo().getUser_id();
+        for (String orderNo : orderNos) {
+            SaasOrder orderNoIdOrder = saasOrderDao.getOrderNoIdOrder(orderNo);
+            if (!tenantId.equals(orderNoIdOrder.getTenantId())) {
+                return 0;
+            }
+        }
+        return saasOrderDao.updateDelOrderByIds(orderNos);
     }
 
     @Override
@@ -152,7 +156,13 @@ public class OrderServiceImpl implements OrderService{
                 }
                 final LocalDateTime expireTime = plus;
 
-                String id = tenantService.toBeTenant(tenantId,groupId,plus,10L,"");
+                BeTenantVO beTenantVO = new BeTenantVO();
+                beTenantVO.setTenantid(tenantId);
+                beTenantVO.setGroupId(groupId);
+                beTenantVO.setPlus(plus);
+                beTenantVO.setMaxSiteNum(10L);
+                beTenantVO.setAddon("");
+                String id = tenantService.toBeTenant(beTenantVO);
 
                 /** 套餐插件 */
 //                if (id!=null) {

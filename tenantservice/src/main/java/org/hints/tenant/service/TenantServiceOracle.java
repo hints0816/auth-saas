@@ -7,10 +7,7 @@ import org.apache.rocketmq.common.message.Message;
 import org.apache.rocketmq.remoting.common.RemotingHelper;
 import org.hints.common.config.AbstractErpProducer;
 import org.hints.common.config.MultiRouteDataSource;
-import org.hints.common.pojo.ReturnVo;
-import org.hints.common.pojo.SaasOracle;
-import org.hints.common.pojo.SaasTenant;
-import org.hints.common.pojo.SysClient;
+import org.hints.common.pojo.*;
 import org.hints.tenant.dao.SaasOracleDao;
 import org.hints.tenant.dao.SaasTenantDao;
 import org.hints.tenant.model.BeTenantVO;
@@ -87,7 +84,7 @@ public class TenantServiceOracle implements TenantService{
     }
 
     @Override
-    public SaasTenant fetchTenantInfo() throws UnsupportedEncodingException {
+    public SaasTenant fetchTenantInfo() {
         String mobile = SecurityUtil.getJwtInfo().getPhonenumber();
         SaasTenant saasTenant = saasTenantDao.selectSaasSysTenantByMobile(mobile);
         saasTenant.setPassword(null);
@@ -196,5 +193,29 @@ public class TenantServiceOracle implements TenantService{
         }
 
         return id;
+    }
+
+    @Override
+    public SaasTenant fetchSaasTenant(String tenant_id) {
+        SaasTenant saasTenant = saasTenantDao.selectSaasSysTenantById(tenant_id);
+        return saasTenant;
+    }
+
+    @Override
+    public TablePageData<SaasTenant> querySaasTenant(SaasTenant saasTenant) {
+        TablePageData<SaasTenant> saasTenantTablePageData = saasTenantDao.selectSaasSysTenantList(saasTenant);
+        return saasTenantTablePageData;
+    }
+
+    @Override
+    public int stopSaasTenant(Long[] tenant_ids) {
+        int delete = saasTenantDao.stopSaasSysTenant(tenant_ids);
+        return delete;
+    }
+
+    @Override
+    public int delSaasTenant(Long[] tenant_ids) {
+        int delete = saasTenantDao.deleteSaasSysTenantByIds(tenant_ids);
+        return delete;
     }
 }

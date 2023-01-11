@@ -2,6 +2,7 @@ package org.hints.tenant.service;
 
 import org.hints.common.pojo.ReturnVo;
 import org.hints.common.pojo.SaasTenant;
+import org.hints.common.pojo.TablePageData;
 import org.hints.tenant.model.BeTenantVO;
 
 import java.io.UnsupportedEncodingException;
@@ -18,8 +19,16 @@ public interface TenantService {
 
     ReturnVo reset(SaasTenant saasTenant);
 
-    SaasTenant fetchTenantInfo() throws UnsupportedEncodingException;
+    SaasTenant fetchTenantInfo();
 
     String toBeTenant(BeTenantVO beTenantVO);
+
+    SaasTenant fetchSaasTenant(String tenant_id);
+
+    TablePageData<SaasTenant> querySaasTenant(SaasTenant saasTenant);
+
+    int stopSaasTenant(Long[] tenant_ids);
+
+    int delSaasTenant(Long[] tenant_ids);
 
 }
