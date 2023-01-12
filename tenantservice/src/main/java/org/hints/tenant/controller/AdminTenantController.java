@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
  * @Date 2023/1/11 9:13
  */
 @RestController
-@RequestMapping("/admin/order")
+@RequestMapping("/admin/tenant")
 public class AdminTenantController {
 
     @Autowired

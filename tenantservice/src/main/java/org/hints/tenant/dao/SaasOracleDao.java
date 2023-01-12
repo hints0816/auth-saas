@@ -32,6 +32,14 @@ public class SaasOracleDao {
         return fetch;
     }
 
+    public List<SaasOracle> querySaasOracleByIdAndTenantId(String tenantId, String id){
+        List<SaasOracle> saasOracles = dao.query(SaasOracle.class,
+                Cnd.where("TENANT_ID", "=", tenantId)
+                        .and("ID","=",id));
+        return saasOracles;
+    }
+
+
     public int updateSaasOracle(SaasOracle saasOracle){
         int update = dao.update(saasOracle);
         return update;

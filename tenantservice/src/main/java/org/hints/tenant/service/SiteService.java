@@ -26,6 +26,6 @@ public interface SiteService {
 
     TablePageData<SaasSite> selectSiteListOnUser(SaasSite saasSite);
 
-    SaasSite selectSiteById(String siteId);
+    SaasSite selectSiteById(String oraId, String siteId);
 
 }

@@ -116,16 +116,24 @@ public class SiteServiceImpl implements SiteService {
     @Override
     public TablePageData<SaasSite> selectSiteListOnUser(SaasSite saasSite) {
         String tenantId = SecurityUtil.getJwtInfo().getUser_id().toString();
-        SaasOracle saasOracle = saasOracleDao.selectSaasOracleById(tenantId);
+        List<SaasOracle> saasOracles = saasOracleDao.querySaasOracleByIdAndTenantId(tenantId, saasSite.getTenantId());
+        if (saasOracles.size() == 0) {
+            return null;
+        }
+        SaasOracle saasOracle = saasOracleDao.selectSaasOracleById(saasSite.getTenantId());
         DataSourceContext.setDBType(saasOracle.getClientId());
         TablePageData tablePageData = saasSiteDao.selectSaasSiteList(saasSite);
         return tablePageData;
     }
 
     @Override
-    public SaasSite selectSiteById(String siteId) {
+    public SaasSite selectSiteById(String oraId, String siteId) {
         String tenantId = SecurityUtil.getJwtInfo().getUser_id().toString();
-        SaasOracle saasOracle = saasOracleDao.selectSaasOracleById(tenantId);
+        List<SaasOracle> saasOracles = saasOracleDao.querySaasOracleByIdAndTenantId(tenantId, oraId);
+        if (saasOracles.size() == 0) {
+            return null;
+        }
+        SaasOracle saasOracle = saasOracleDao.selectSaasOracleById(oraId);
         DataSourceContext.setDBType(saasOracle.getClientId());
         SaasSite saasSite = saasSiteDao.selectSaasSiteById(siteId);
         return saasSite;

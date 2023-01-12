@@ -14,13 +14,13 @@ import javax.servlet.http.HttpServletResponse;
  */
 public interface OrderService {
 
-    SaasOrder saveOrder(SaasOrder SaasOrder);
+    SaasOrder saveOrder(SaasOrder saasOrder);
 
-    int updateOrder(SaasOrder SaasOrder);
+    int updateOrder(SaasOrder saasOrder);
 
-    TablePageData<SaasOrder> selectOrderPage(SaasOrder SaasOrder);
+    TablePageData<SaasOrder> selectOrderPage(SaasOrder saasOrder);
 
-    TablePageData<SaasOrder> selectOrderPageOnUser(SaasOrder SaasOrder);
+    TablePageData<SaasOrder> selectOrderPageOnUser(SaasOrder saasOrder);
 
     SaasOrder getOrderNo(String orderNO);
 
@@ -36,9 +36,7 @@ public interface OrderService {
 
     int closeOrder(String[] orderNos);
 
-    int updatePayTypeOrder(SaasOrder SaasOrder);
-
-    int delOrderNos(String[] orderNOs);
+    int updatePayTypeOrder(SaasOrder saasOrder);
 
     ReturnVo uploadPayCert(MultipartFile file, String orderNo);
 

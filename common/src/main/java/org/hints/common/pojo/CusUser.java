@@ -88,7 +88,7 @@ public class CusUser implements UserDetails {
      */
     private Long[] post_ids;
 
-    private Set<GrantedAuthority> authorities;
+    private Collection<? extends GrantedAuthority> authorities;
 
     private boolean accountNonExpired;
     private boolean accountNonLocked;
@@ -318,7 +318,7 @@ public class CusUser implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return utype;
+        return this.authorities;
     }
 
     @Override
@@ -333,22 +333,22 @@ public class CusUser implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return true;
+        return this.accountNonExpired;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return true;
+        return this.accountNonLocked;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return true;
+        return this.credentialsNonExpired;
     }
 
     @Override
     public boolean isEnabled() {
-        return true;
+        return this.enabled;
     }
 
     private static SortedSet<GrantedAuthority> sortAuthorities(Collection<? extends GrantedAuthority> authorities) {

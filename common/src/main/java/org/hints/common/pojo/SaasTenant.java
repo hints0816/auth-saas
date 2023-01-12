@@ -47,6 +47,6 @@ public class SaasTenant extends BaseEntity{
     private LocalDateTime update_time;
 
     @Column
-    private Long status;
+    private Integer status;
 
 }

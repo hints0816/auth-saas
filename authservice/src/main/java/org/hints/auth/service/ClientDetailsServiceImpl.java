@@ -29,10 +29,6 @@ public class ClientDetailsServiceImpl implements ClientDetailsService {
 
     private RedisTemplate<String, Object> redisTemplate;
 
-    public RedisTemplate<String, Object> getRedisTemplate() {
-        return redisTemplate;
-    }
-
     public void setRedisTemplate(RedisTemplate<String, Object> redisTemplate) {
         this.redisTemplate = redisTemplate;
     }

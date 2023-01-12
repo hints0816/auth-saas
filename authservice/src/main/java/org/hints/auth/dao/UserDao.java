@@ -2,6 +2,7 @@ package org.hints.auth.dao;
 
 import org.hints.common.pojo.Client;
 import org.hints.common.pojo.CusUser;
+import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
 import org.nutz.dao.Sqls;
 import org.nutz.dao.entity.Record;
@@ -22,8 +23,13 @@ public class UserDao {
 
     private static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
-    public CusUser finduser(String userid) {
+    public CusUser finduserByUsid(String userid) {
         CusUser user = dao.fetch(CusUser.class, userid);
+        return user;
+    }
+
+    public CusUser finduserByUserName(String username) {
+        CusUser user = dao.fetch(CusUser.class, Cnd.where("USER_NAME","=",username));
         return user;
     }
 

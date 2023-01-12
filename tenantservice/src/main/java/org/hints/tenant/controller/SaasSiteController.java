@@ -25,10 +25,10 @@ public class SaasSiteController {
         return ReturnVo.success(saasSiteTablePageData);
     }
 
-    @GetMapping(value = "/{siteId}")
-    public ReturnVo getInfo(@PathVariable("siteId") String siteId)
+    @GetMapping(value = "/{siteId}/{oraId}")
+    public ReturnVo getInfo(@PathVariable("siteId") String siteId, @PathVariable("oraId") String oraId)
     {
-        SaasSite saasSite = siteService.selectSiteById(siteId);
+        SaasSite saasSite = siteService.selectSiteById(oraId, siteId);
         return ReturnVo.success(saasSite);
     }
 

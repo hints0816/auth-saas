@@ -31,10 +31,4 @@ public class AdminOrderController {
         return ReturnVo.toAjax(orderService.updateStatusOrder(orderNo,orderStatus));
     }
 
-    @DeleteMapping("/{orderNos}")
-    public ReturnVo remove(@PathVariable String[] orderNos)
-    {
-        return ReturnVo.toAjax(orderService.delOrderNos(orderNos));
-    }
-
 }

@@ -2,12 +2,26 @@
 # @name loginAdmin
 GET http://localhost:6002/oauth/token?username=18088824610&password=Qwe!2345&grant_type=password&client_id=saas_client&client_secret=123456 HTTP/1.1
 
-### commodity query
+### tenant register
+POST  http://localhost:8084/tenant/register HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+content-type: application/json
+
+{"password":"123456",
+"email":"1152556969qq.com",
+"mobile":18088824525}
+
+
+### me
 GET http://localhost:8084/tenant/me HTTP/1.1
 Authorization: Bearer {{loginAdmin.response.body.access_token}}
 
 ### commodity query
 GET http://localhost:8084/commodity/list HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+
+### commodity fetch
+GET http://localhost:8084/commodity/ecc4ccb29f2faefb HTTP/1.1
 Authorization: Bearer {{loginAdmin.response.body.access_token}}
 
 ### order check
@@ -19,8 +33,93 @@ POST  http://localhost:8084/order/submit HTTP/1.1
 Authorization: Bearer {{loginAdmin.response.body.access_token}}
 content-type: application/json
 
-{"groupId":"ecc4ccb29f2faefb","groupPeriodNum":1}
+{"groupId":"ecc4ccb29f2faefb","groupPeriodNum":2}
+
+### order fetch
+GET http://localhost:8084/order/1673507976402301964 HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
 
 ### order list
 GET http://localhost:8084/order/list?pageNum=1&pageSize=10&order_no=&orderStatus= HTTP/1.1
 Authorization: Bearer {{loginAdmin.response.body.access_token}}
+
+### order close
+DELETE http://localhost:8084/order/close/1673342761420816014 HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+
+### order delete
+DELETE http://localhost:8084/order/del/1673342761420816014 HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+
+### order paytype
+PUT http://localhost:8084/order/paytype HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+content-type: application/json
+
+{"order_no":"1673507976402301964","payCert":"","payCertex":""}
+
+### entity query
+GET http://localhost:8084/entity/list?pageNum=1&pageSize=10 HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+
+### entity fetch
+GET http://localhost:8084/entity/1673513456897265 HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+
+### site query
+GET http://localhost:8084/site/list?tenantId=1673515935230921 HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+
+### site fetch
+GET http://localhost:8084/site/1673515979300231/1673515935230921 HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+
+### site add
+POST http://localhost:8084/site HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+content-type: application/json
+
+{
+    "tenantId": "1673515935230921",
+    "title": "测试",
+    "company": "测试",
+    "desa": "1",
+    "logo": "saas/site/10b0adff-5e87-4104-9e42-aa1791367556.jpg",
+    "phone": "18088824625",
+    "qq": "1",
+    "weixin": "1",
+    "address": "河北/邯郸/峰峰矿区/1"
+}
+
+### site edit
+PUT http://localhost:8084/site HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+content-type: application/json
+
+{
+    "site_id": "1673515979300231",
+    "tenantId": "1673515935230921",
+    "title": "123213",
+    "logo": "saas/site/73761162-6c9b-4a8e-a24d-4f0d78de2330.jpg",
+    "desa": "123",
+    "address": "天津/天津/红桥区/213",
+    "phone": "18088888888",
+    "qq": "123",
+    "weixin": "123",
+    "status": 1,
+    "closeReason": null,
+    "modify_time": null,
+    "addressUrl": null,
+    "company": "123"
+}
+
+### site close
+DELETE http://localhost:8084/site/close/1673517121108516/1673515935230921 HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+
+### site status
+PUT http://localhost:8084/site/close/1673517121108516/1673515935230921 HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+content-type: application/json
+
+{"tenantId":"1673515935230921","site_id":"1673515979300231","status":2}

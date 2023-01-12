@@ -1,0 +1,76 @@
+### Get Token
+# @name loginAdmin
+GET http://localhost:6002/oauth/token?username=123&password=123456&grant_type=password&client_id=scm_client&client_secret=123456 HTTP/1.1
+
+### tenant query
+GET http://localhost:8084/admin/tenant/list HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+
+### tenant fetch
+GET http://localhost:8084/admin/tenant/164664221232242 HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+
+### tenant stop
+DELETE http://localhost:8084/admin/tenant/stop HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+
+### tenant delete
+DELETE http://localhost:8084/admin/tenant/164664221232242 HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+
+### commodity query
+GET http://localhost:8084/admin/commodity/list HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+
+### commodity fetch
+GET http://localhost:8084/admin/commodity/f184ca12ba931610 HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+
+### commodity add
+POST http://localhost:8084/admin/commodity HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+content-type: application/json
+
+{
+    "dsca":"肯德基1+1",
+    "fee":"1",
+    "unit":"周",
+    "status":"1",
+    "group_name":"123",
+    "type":"",
+    "addonArray":"161"
+}
+
+### commodity update
+PUT http://localhost:8084/admin/commodity HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+content-type: application/json
+
+{
+    "groupId": "f184ca12ba931610",
+    "type": null,
+    "groupName": null,
+    "image": null,
+    "addonArray": "161",
+    "unit": "周",
+    "fee": 1,
+    "dsca": "肯德基1+2",
+    "status": 2
+  }
+
+### commodity delete
+DELETE http://localhost:8084/admin/commodity/f184ca12ba931610 HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+
+### order query
+GET http://localhost:8084/admin/order/list?pageNum=1&pageSize=10&orderStatus=1&payStatus=2 HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+
+### order fetch
+GET http://localhost:8084/admin/order/1673507976402301964 HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+
+### order status
+PUT http://localhost:8084/admin/order/status?orderStatus=2&orderNo=1673507976402301964 HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
+content-type: application/json

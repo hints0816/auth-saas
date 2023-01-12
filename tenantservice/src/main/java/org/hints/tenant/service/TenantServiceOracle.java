@@ -66,7 +66,7 @@ public class TenantServiceOracle implements TenantService{
         saasTenant.setSysUid(sysuid);
         saasTenant.setCreate_time(LocalDateTime.now());
         saasTenant.setTenant_id(sysuid);
-        saasTenant.setStatus(1L);
+        saasTenant.setStatus(1);
         //BCrypt密码加密
         String finalSecret = new BCryptPasswordEncoder().encode(saasTenant.getPassword());
         saasTenant.setPassword(finalSecret);

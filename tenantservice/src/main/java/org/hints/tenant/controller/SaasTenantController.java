@@ -4,6 +4,8 @@ import org.hints.common.pojo.ReturnVo;
 import org.hints.common.pojo.SaasTenant;
 import org.hints.tenant.service.TenantService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 

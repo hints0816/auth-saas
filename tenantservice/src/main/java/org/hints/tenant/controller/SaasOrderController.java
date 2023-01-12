@@ -57,34 +57,22 @@ public class SaasOrderController {
         return ReturnVo.toAjax(orderService.closeOrder(orderNos));
     }
 
-    /**
-     * 软删除(租户)
-     */
     @DeleteMapping("/del/{orderNos}")
     public ReturnVo removeUpdate(@PathVariable String[] orderNos)
     {
         return ReturnVo.toAjax(orderService.updateDelOrderByIds(orderNos));
     }
 
-    /**
-     * 线下支付（上传文件，说明）
-     */
     @PutMapping(value = "/paytype")
     public ReturnVo updatePayTypeOrder(@RequestBody SaasOrder SaasOrder){
         return ReturnVo.toAjax(orderService.updatePayTypeOrder(SaasOrder));
     }
 
-    /**
-     * 上传文件
-     */
     @PostMapping("/upload")
     public ReturnVo upload(MultipartFile file, String orderNo) {
         return orderService.uploadPayCert(file, orderNo);
     }
 
-    /**
-     * 下载文件
-     */
     @GetMapping("/download")
     public void download(@RequestParam String path, HttpServletResponse response) {
         orderService.downloadPayCert(path, response);

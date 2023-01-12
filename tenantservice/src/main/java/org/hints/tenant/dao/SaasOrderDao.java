@@ -140,6 +140,9 @@ public class SaasOrderDao {
         String outTradeNo = saasOrder.getOutTradeNo();
         saasOrder.setOutTradeNo(null);
         Cnd cnd = Cnd.from(dao,saasOrder);
+        if (cnd == null){
+            cnd = Cnd.where("1","=","1");
+        }
         if(StringUtils.isNotBlank(saasOrder.getOrder_no())){
             cnd = cnd.and("order_no","like", saasOrder.getOrder_no()+"%");
         }

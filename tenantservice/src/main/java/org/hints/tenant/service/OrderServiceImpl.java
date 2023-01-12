@@ -79,8 +79,9 @@ public class OrderServiceImpl implements OrderService{
     }
 
     @Override
-    public TablePageData<SaasOrder> selectOrderPage(SaasOrder SaasOrder) {
-        return null;
+    public TablePageData<SaasOrder> selectOrderPage(SaasOrder saasOrder) {
+        TablePageData<SaasOrder> saasSysOrderTablePageData = saasOrderDao.selectOrderPage(saasOrder);
+        return saasSysOrderTablePageData;
     }
 
     @Override
@@ -178,8 +179,10 @@ public class OrderServiceImpl implements OrderService{
 //                        });
 //                    }
 //                }
+                // TODO 邮件短信通知
+            }else{
+                // TODO 邮件短信通知
             }
-            return 1;
         }
         return 0;
     }
@@ -218,11 +221,6 @@ public class OrderServiceImpl implements OrderService{
         /** 支付状态为2已支付 */
         orderNoIdOrder.setPayStatus(2);
         return saasOrderDao.updatePayTypeOrder(orderNoIdOrder);
-    }
-
-    @Override
-    public int delOrderNos(String[] orderNOs) {
-        return saasOrderDao.delOrderNos(orderNOs);
     }
 
     @Override
