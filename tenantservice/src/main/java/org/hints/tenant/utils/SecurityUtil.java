@@ -7,6 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.hints.common.pojo.CusUser;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -42,6 +43,12 @@ public class SecurityUtil {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String principal = authentication.getPrincipal().toString();
         return principal;
+    }
+
+    public static String getClientId() {
+        OAuth2Authentication oAuth2Authentication = (OAuth2Authentication)SecurityContextHolder.getContext().getAuthentication();
+        String clientId = oAuth2Authentication.getOAuth2Request().getClientId();
+        return clientId;
     }
 
 }

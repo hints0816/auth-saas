@@ -1,0 +1,61 @@
+/* tenant.scm_sys_user */
+create table $user.SCM_SYS_USER(
+  USERID                NUMBER(8) not null,
+  USERNAME              VARCHAR2(20) not null,
+  CHINESENAME           VARCHAR2(20),
+  PWD                   VARCHAR2(100) not null,
+  LOGINIP               VARCHAR2(500),
+  DEPID                 VARCHAR2(500),
+  DEPNAME               VARCHAR2(500),
+  ISENABLE              NUMBER(1),
+  ACCOUNTNONEXPIRED     NUMBER(1),
+  ACCOUNTNONLOCKED      NUMBER(1),
+  CREDENTIALSNONEXPIRED NUMBER(1),
+  MAIL                  VARCHAR2(50),
+  AVATAR                VARCHAR2(50),
+  CREATEDT              DATE,
+  LASTLOGINDT           DATE,
+  DEADLINEDT            DATE,
+  UPDATEDT              DATE,
+  INTRODUCTION          VARCHAR2(200)
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  )
+/* tenant.scm_sys_user.key */
+alter table $user.SCM_SYS_USER
+  add primary key (USERNAME)
+  using index 
+  tablespace CMDB
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  )
+/* tenant.scm_sys_user.sequence */
+create sequence $user.USEREX_SEQ
+minvalue 1
+maxvalue 9999999
+start with 145
+increment by 1
+cache 20
+/* tenant.scm_sys_user.trigger */
+create or replace trigger $user.USEREX_TRIGGER
+before insert on $user.scm_sys_user
+for each row
+begin
+ select $user.USEREX_SEQ.nextval into:New.userid from dual;
+end

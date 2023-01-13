@@ -17,7 +17,7 @@ import java.util.*;
 import java.util.function.Function;
 
 @Data
-@Table("sys_user")
+@Table("sys_user${comp}")
 @NoArgsConstructor
 public class CusUser implements UserDetails {
 

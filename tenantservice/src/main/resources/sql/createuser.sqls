@@ -1,0 +1,8 @@
+/* tenant.create */
+create user $user identified by $key
+/* tenant.grant */
+grant connect, resource to $user
+/* tenant.tablespace */
+alter user $user default tablespace CMDB
+
+

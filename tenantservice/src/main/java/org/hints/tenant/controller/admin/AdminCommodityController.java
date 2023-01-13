@@ -1,4 +1,4 @@
-package org.hints.tenant.controller;
+package org.hints.tenant.controller.admin;
 
 import org.hints.common.pojo.ReturnVo;
 import org.hints.common.pojo.SaasCommodity;

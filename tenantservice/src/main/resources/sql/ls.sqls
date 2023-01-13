@@ -1,0 +1,838 @@
+-- Create table
+create table SAAS_TENANT_ADDON
+(
+  TENANT_ID   NUMBER not null,
+  ADDON_ID    NUMBER not null,
+  EXPIRE_TIME DATE,
+  STATUS      NUMBER
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table
+comment on table SAAS_TENANT_ADDON
+  is '租户插件表';
+-- Add comments to the columns
+comment on column SAAS_TENANT_ADDON.TENANT_ID
+  is '租户ID';
+comment on column SAAS_TENANT_ADDON.ADDON_ID
+  is '插件ID';
+comment on column SAAS_TENANT_ADDON.EXPIRE_TIME
+  is '插件到期时间';
+comment on column SAAS_TENANT_ADDON.STATUS
+  is '状态';
+-- Create/Recreate primary, unique and foreign key constraints
+alter table SAAS_TENANT_ADDON
+  add constraint TENANT_ADDON_KEY primary key (TENANT_ID, ADDON_ID)
+  using index
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+
+
+-- Create table
+create table SAAS_COMMODITY
+(
+  GROUP_ID    VARCHAR2(20) not null,
+  TYPE        NUMBER,
+  GROUP_NAME  VARCHAR2(255),
+  IMAGE       VARCHAR2(255),
+  ADDON_ARRAY VARCHAR2(512),
+  UNIT        VARCHAR2(20),
+  FEE         NUMBER,
+  DSCA        VARCHAR2(2000),
+  STATUS      NUMBER,
+  CREATE_TIME DATE,
+  MODIFY_TIME DATE
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table
+comment on table SAAS_COMMODITY
+  is 'SAAS系统商品表';
+-- Add comments to the columns
+comment on column SAAS_COMMODITY.GROUP_ID
+  is '商品ID';
+comment on column SAAS_COMMODITY.TYPE
+  is '商品类型0:租户1:站点2:服务';
+comment on column SAAS_COMMODITY.GROUP_NAME
+  is '商品名称';
+comment on column SAAS_COMMODITY.IMAGE
+  is '商品图片';
+comment on column SAAS_COMMODITY.ADDON_ARRAY
+  is '服务';
+comment on column SAAS_COMMODITY.UNIT
+  is '单位';
+comment on column SAAS_COMMODITY.FEE
+  is '费用';
+comment on column SAAS_COMMODITY.DSCA
+  is '描述';
+comment on column SAAS_COMMODITY.STATUS
+  is '状态0:下架1:上架2:试用';
+comment on column SAAS_COMMODITY.CREATE_TIME
+  is '创建时间';
+comment on column SAAS_COMMODITY.MODIFY_TIME
+  is '修改时间';
+-- Create/Recreate primary, unique and foreign key constraints
+alter table SAAS_COMMODITY
+  add constraint GROUPKEY primary key (GROUP_ID)
+  using index
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+
+
+-- Create table
+create table SAAS_MENU_ADDON
+(
+  ADDON_ID NUMBER not null,
+  TENO     VARCHAR2(10) not null
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table
+comment on table SAAS_MENU_ADDON
+  is '菜单插件表';
+-- Add comments to the columns
+comment on column SAAS_MENU_ADDON.ADDON_ID
+  is '插件ID';
+comment on column SAAS_MENU_ADDON.TENO
+  is '菜单ID';
+
+
+-- Create table
+create table SAAS_NOTICE
+(
+  ID          NUMBER not null,
+  TITLE       VARCHAR2(255),
+  CONTENT     LONG,
+  IS_TOP      NUMBER,
+  CREATE_TIME DATE,
+  MODIFY_TIME DATE,
+  SORT        NUMBER
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the columns
+comment on column SAAS_NOTICE.ID
+  is '主键';
+comment on column SAAS_NOTICE.TITLE
+  is '主题';
+comment on column SAAS_NOTICE.CONTENT
+  is '内容';
+comment on column SAAS_NOTICE.IS_TOP
+  is '是否置顶';
+comment on column SAAS_NOTICE.CREATE_TIME
+  is '创建时间';
+comment on column SAAS_NOTICE.MODIFY_TIME
+  is '修改时间';
+comment on column SAAS_NOTICE.SORT
+  is '排序';
+
+
+-- Create table
+create table SAAS_SITE
+(
+  SITE_ID      VARCHAR2(50) not null,
+  TENANT_ID    NUMBER,
+  TITLE        VARCHAR2(255),
+  LOGO         VARCHAR2(255),
+  DESA         VARCHAR2(255),
+  ADDRESS      VARCHAR2(255),
+  PHONE        VARCHAR2(255),
+  QQ           VARCHAR2(255),
+  WEIXIN       VARCHAR2(255),
+  STATUS       NUMBER,
+  CLOSE_REASON VARCHAR2(255),
+  CREATE_TIME  DATE,
+  MODIFY_TIME  DATE,
+  ADDRESS_URL  VARCHAR2(255),
+  COMPANY      VARCHAR2(255)
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table
+comment on table SAAS_SITE
+  is '站点信息表';
+-- Add comments to the columns
+comment on column SAAS_SITE.SITE_ID
+  is '站点ID';
+comment on column SAAS_SITE.TENANT_ID
+  is '租户ID';
+comment on column SAAS_SITE.TITLE
+  is '站点名称';
+comment on column SAAS_SITE.LOGO
+  is '站点图标';
+comment on column SAAS_SITE.DESA
+  is '站点简介';
+comment on column SAAS_SITE.ADDRESS
+  is '地址';
+comment on column SAAS_SITE.PHONE
+  is '联系电话';
+comment on column SAAS_SITE.QQ
+  is '微信';
+comment on column SAAS_SITE.WEIXIN
+  is 'QQ';
+comment on column SAAS_SITE.STATUS
+  is '状态';
+comment on column SAAS_SITE.CLOSE_REASON
+  is '关闭原因';
+comment on column SAAS_SITE.CREATE_TIME
+  is '创建时间';
+comment on column SAAS_SITE.MODIFY_TIME
+  is '修改时间';
+comment on column SAAS_SITE.ADDRESS_URL
+  is '站点URl';
+comment on column SAAS_SITE.COMPANY
+  is '公司名称';
+-- Create/Recreate primary, unique and foreign key constraints
+alter table SAAS_SITE
+  add constraint SAASSITE_KEY primary key (SITE_ID)
+  using index
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+
+
+-- Create table
+create table SAAS_SYS_ADDON
+(
+  ADDON_ID    NUMBER not null,
+  NAME        VARCHAR2(100),
+  TYPE        NUMBER,
+  ICON        VARCHAR2(200),
+  DESA        VARCHAR2(500),
+  STATUS      NUMBER,
+  AUTHOR      VARCHAR2(50),
+  VERSION     VARCHAR2(50),
+  CONTENT     VARCHAR2(500),
+  CREATE_TIME DATE
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table
+comment on table SAAS_SYS_ADDON
+  is '插件信息表';
+-- Add comments to the columns
+comment on column SAAS_SYS_ADDON.ADDON_ID
+  is '主键';
+comment on column SAAS_SYS_ADDON.NAME
+  is '插件名';
+comment on column SAAS_SYS_ADDON.TYPE
+  is '类型';
+comment on column SAAS_SYS_ADDON.ICON
+  is '图标';
+comment on column SAAS_SYS_ADDON.DESA
+  is '描述';
+comment on column SAAS_SYS_ADDON.STATUS
+  is '状态';
+comment on column SAAS_SYS_ADDON.AUTHOR
+  is '作者';
+comment on column SAAS_SYS_ADDON.VERSION
+  is '版本';
+comment on column SAAS_SYS_ADDON.CONTENT
+  is '详情';
+comment on column SAAS_SYS_ADDON.CREATE_TIME
+  is '创建时间';
+-- Create/Recreate primary, unique and foreign key constraints
+alter table SAAS_SYS_ADDON
+  add constraint ADDNOKEY primary key (ADDON_ID)
+  using index
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+
+
+-- Create table
+create table SAAS_SYS_TENANT
+(
+  SYS_UID      VARCHAR2(200) not null,
+  CLIENT_ID    VARCHAR2(200),
+  MOBILE       VARCHAR2(200),
+  PASSWORD     VARCHAR2(200),
+  EMAIL        VARCHAR2(200),
+  CREATE_TIME  DATE,
+  UPDATE_TIME  DATE,
+  STATUS       NUMBER,
+  SITE_NUM     NUMBER,
+  TENANT_ID    NUMBER not null,
+  MAX_SITE_NUM NUMBER,
+  IS_TENANT    NUMBER,
+  GROUP_ID     VARCHAR2(200),
+  EXPIRE_TIME  DATE,
+  DOMAIN       VARCHAR2(200)
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table
+comment on table SAAS_SYS_TENANT
+  is '租户信息';
+-- Add comments to the columns
+comment on column SAAS_SYS_TENANT.SYS_UID
+  is '登录账号';
+comment on column SAAS_SYS_TENANT.CLIENT_ID
+  is 'ORACLE USERNAME';
+comment on column SAAS_SYS_TENANT.MOBILE
+  is '手机号';
+comment on column SAAS_SYS_TENANT.PASSWORD
+  is '密码（暂不编码）';
+comment on column SAAS_SYS_TENANT.EMAIL
+  is '邮箱';
+comment on column SAAS_SYS_TENANT.CREATE_TIME
+  is '创建时间';
+comment on column SAAS_SYS_TENANT.UPDATE_TIME
+  is '更新时间';
+comment on column SAAS_SYS_TENANT.STATUS
+  is '状态';
+comment on column SAAS_SYS_TENANT.SITE_NUM
+  is '已创建站点数量';
+comment on column SAAS_SYS_TENANT.TENANT_ID
+  is '租户ID';
+comment on column SAAS_SYS_TENANT.MAX_SITE_NUM
+  is '最大站点数量';
+comment on column SAAS_SYS_TENANT.IS_TENANT
+  is '是否租户';
+comment on column SAAS_SYS_TENANT.GROUP_ID
+  is '套餐ID';
+comment on column SAAS_SYS_TENANT.EXPIRE_TIME
+  is '到期时间';
+comment on column SAAS_SYS_TENANT.DOMAIN
+  is '主域名';
+-- Create/Recreate primary, unique and foreign key constraints
+alter table SAAS_SYS_TENANT
+  add constraint TANENTKEY primary key (TENANT_ID)
+  using index
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+alter table SAAS_SYS_TENANT
+  add constraint MOBILEKEY unique (MOBILE)
+  using index
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+
+
+-- Create table
+create table SAAS_TENANT_ADDON
+(
+  TENANT_ID   NUMBER not null,
+  ADDON_ID    NUMBER not null,
+  EXPIRE_TIME DATE,
+  STATUS      NUMBER
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table
+comment on table SAAS_TENANT_ADDON
+  is '租户插件表';
+-- Add comments to the columns
+comment on column SAAS_TENANT_ADDON.TENANT_ID
+  is '租户ID';
+comment on column SAAS_TENANT_ADDON.ADDON_ID
+  is '插件ID';
+comment on column SAAS_TENANT_ADDON.EXPIRE_TIME
+  is '插件到期时间';
+comment on column SAAS_TENANT_ADDON.STATUS
+  is '状态';
+-- Create/Recreate primary, unique and foreign key constraints
+alter table SAAS_TENANT_ADDON
+  add constraint TENANT_ADDON_KEY primary key (TENANT_ID, ADDON_ID)
+  using index
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+
+
+-- Create table
+create table SYS_API_ROLE
+(
+  ROID       VARCHAR2(20),
+  APIURL     VARCHAR2(200) not null,
+  METHOD     VARCHAR2(20) not null,
+  TYPE       NUMBER not null,
+  TOKEN      VARCHAR2(200),
+  CREATETIME DATE not null,
+  DSCA       VARCHAR2(200),
+  ID         NUMBER not null
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the columns
+comment on column SYS_API_ROLE.ROID
+  is '角色ID';
+comment on column SYS_API_ROLE.APIURL
+  is 'URL';
+comment on column SYS_API_ROLE.METHOD
+  is 'METHOD';
+comment on column SYS_API_ROLE.TYPE
+  is '1.放权2.加权3.外放';
+comment on column SYS_API_ROLE.DSCA
+  is '接口描述';
+-- Create/Recreate primary, unique and foreign key constraints
+alter table SYS_API_ROLE
+  add constraint APIROLE_ID primary key (ID)
+  using index
+  tablespace CMDB
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+
+
+-- Create table
+create table SYS_API_USER
+(
+  API_ID   NUMBER not null,
+  USERNAME VARCHAR2(20) not null
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Create/Recreate primary, unique and foreign key constraints
+alter table SYS_API_USER
+  add constraint FOR_APIID foreign key (API_ID)
+  references SYS_API_ROLE (ID);
+alter table SYS_API_USER
+  add constraint FOR_USERNAME foreign key (USERNAME)
+  references SCM_SYS_USER (USERNAME);
+
+-- Create table
+create table SYS_DICT_DATA
+(
+  DICT_CODE   NUMBER not null,
+  DICT_SORT   NUMBER(3) default 0,
+  DICT_LABEL  VARCHAR2(100),
+  DICT_VALUE  VARCHAR2(100),
+  DICT_TYPE   VARCHAR2(100),
+  CSS_CLASS   VARCHAR2(100),
+  LIST_CLASS  VARCHAR2(100),
+  IS_DEFAULT  CHAR(1) default 'N',
+  STATUS      CHAR(1) default '0',
+  CREATE_BY   VARCHAR2(64),
+  CREATE_TIME DATE,
+  UPDATE_BY   VARCHAR2(64),
+  UPDATE_TIME DATE,
+  REMARK      VARCHAR2(500)
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the columns
+comment on column SYS_DICT_DATA.DICT_CODE
+  is '字典编码';
+comment on column SYS_DICT_DATA.DICT_SORT
+  is '字典排序';
+comment on column SYS_DICT_DATA.DICT_LABEL
+  is '字典标签';
+comment on column SYS_DICT_DATA.DICT_VALUE
+  is '字典键值';
+comment on column SYS_DICT_DATA.DICT_TYPE
+  is '字典类型';
+comment on column SYS_DICT_DATA.CSS_CLASS
+  is '样式属性（其他样式扩展）';
+comment on column SYS_DICT_DATA.LIST_CLASS
+  is '表格回显样式';
+comment on column SYS_DICT_DATA.IS_DEFAULT
+  is '是否默认（Y是 N否）';
+comment on column SYS_DICT_DATA.STATUS
+  is '状态（0正常 1停用）';
+comment on column SYS_DICT_DATA.CREATE_BY
+  is '创建者';
+comment on column SYS_DICT_DATA.CREATE_TIME
+  is '创建时间';
+comment on column SYS_DICT_DATA.UPDATE_BY
+  is '更新者';
+comment on column SYS_DICT_DATA.UPDATE_TIME
+  is '更新时间';
+comment on column SYS_DICT_DATA.REMARK
+  is '备注';
+
+
+-- Create table
+create table SYS_DICT_TYPE
+(
+  DICT_ID     NUMBER not null,
+  DICT_NAME   VARCHAR2(100),
+  DICT_TYPE   VARCHAR2(100),
+  STATUS      CHAR(1) default '0',
+  CREATE_BY   VARCHAR2(64),
+  CREATE_TIME DATE,
+  UPDATE_BY   VARCHAR2(64),
+  UPDATE_TIME DATE,
+  REMARK      VARCHAR2(500)
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the columns
+comment on column SYS_DICT_TYPE.DICT_ID
+  is '字典主键';
+comment on column SYS_DICT_TYPE.DICT_NAME
+  is '字典名称';
+comment on column SYS_DICT_TYPE.DICT_TYPE
+  is '字典类型';
+comment on column SYS_DICT_TYPE.STATUS
+  is '状态（0正常 1停用）';
+comment on column SYS_DICT_TYPE.CREATE_BY
+  is '创建者';
+comment on column SYS_DICT_TYPE.CREATE_TIME
+  is '创建时间';
+comment on column SYS_DICT_TYPE.UPDATE_BY
+  is '更新者';
+comment on column SYS_DICT_TYPE.UPDATE_TIME
+  is '更新时间';
+comment on column SYS_DICT_TYPE.REMARK
+  is '备注';
+-- Create/Recreate primary, unique and foreign key constraints
+alter table SYS_DICT_TYPE
+  add constraint DICT_ID_PRIM primary key (DICT_ID)
+  using index
+  tablespace CMDB
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+alter table SYS_DICT_TYPE
+  add constraint DICT_NAME_UNI unique (DICT_NAME)
+  using index
+  tablespace CMDB
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+
+
+-- Create table
+create table SYS_OPER_LOG
+(
+  TITLE          VARCHAR2(50),
+  BUSINESS_TYPE  NUMBER(2) default 0,
+  METHOD         VARCHAR2(100),
+  REQUEST_METHOD VARCHAR2(10),
+  OPERATOR_TYPE  NUMBER(1) default 0,
+  OPER_NAME      VARCHAR2(50),
+  COMP           VARCHAR2(50),
+  OPER_URL       VARCHAR2(255),
+  OPER_IP        VARCHAR2(50),
+  OPER_LOCATION  VARCHAR2(255),
+  OPER_PARAM     VARCHAR2(2000),
+  JSON_RESULT    VARCHAR2(2000),
+  STATUS         NUMBER(1) default 0,
+  ERROR_MSG      VARCHAR2(2000) default ' ',
+  OPER_TIME      DATE,
+  ID             NUMBER
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the columns
+comment on column SYS_OPER_LOG.TITLE
+  is '主题';
+comment on column SYS_OPER_LOG.BUSINESS_TYPE
+  is '操作类型';
+comment on column SYS_OPER_LOG.METHOD
+  is '方法名';
+comment on column SYS_OPER_LOG.REQUEST_METHOD
+  is '请求方式:GET/POST/PUT等';
+comment on column SYS_OPER_LOG.OPERATOR_TYPE
+  is '操作人类别';
+comment on column SYS_OPER_LOG.OPER_NAME
+  is '操作人邮箱';
+comment on column SYS_OPER_LOG.COMP
+  is '基地';
+comment on column SYS_OPER_LOG.OPER_URL
+  is '接口地址';
+comment on column SYS_OPER_LOG.OPER_IP
+  is '操作人ip';
+comment on column SYS_OPER_LOG.OPER_LOCATION
+  is '操作地点，暂无';
+comment on column SYS_OPER_LOG.OPER_PARAM
+  is '请求参数';
+comment on column SYS_OPER_LOG.JSON_RESULT
+  is '返回参数';
+comment on column SYS_OPER_LOG.STATUS
+  is '状态0:成功,1:异常';
+comment on column SYS_OPER_LOG.ERROR_MSG
+  is '异常信息';
+comment on column SYS_OPER_LOG.OPER_TIME
+  is '操作时间';
+
+
+-- Create table
+create table SYS_LOGININFOR
+(
+  LOGIN_NAME     VARCHAR2(50),
+  IPADDR         VARCHAR2(50),
+  LOGIN_LOCATION VARCHAR2(255),
+  BROWSER        VARCHAR2(50),
+  OS             VARCHAR2(50),
+  STATUS         CHAR(1) default 0,
+  MSG            VARCHAR2(255),
+  LOGIN_TIME     DATE,
+  COMP           VARCHAR2(50),
+  ID             NUMBER,
+  CLIENT_ID      VARCHAR2(50)
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the columns
+comment on column SYS_LOGININFOR.LOGIN_NAME
+  is '登录账号';
+comment on column SYS_LOGININFOR.IPADDR
+  is '登录IP地址';
+comment on column SYS_LOGININFOR.LOGIN_LOCATION
+  is '登录地址';
+comment on column SYS_LOGININFOR.BROWSER
+  is '浏览器类型';
+comment on column SYS_LOGININFOR.OS
+  is '操作系统';
+comment on column SYS_LOGININFOR.STATUS
+  is '登录状态(0成功1失败)';
+comment on column SYS_LOGININFOR.MSG
+  is '提示信息';
+comment on column SYS_LOGININFOR.LOGIN_TIME
+  is '访问时间';
+comment on column SYS_LOGININFOR.COMP
+  is '基地编号';
+comment on column SYS_LOGININFOR.ID
+  is '序号';
+comment on column SYS_LOGININFOR.CLIENT_ID
+  is '客户端ID';
+
+
+-- Create table
+create table SCM_SYS_CLIENT
+(
+  CLIENTID                    VARCHAR2(50) not null,
+  CLIENTSECRET                VARCHAR2(200),
+  AUTHORIZEDGRANTTYPES        VARCHAR2(50) not null,
+  REDIRECTURI                 VARCHAR2(100),
+  ACCESSTOKENVALIDITYSECONDS  NUMBER(20) not null,
+  REFRESHTOKENVALIDITYSECONDS NUMBER(20) not null,
+  SCOPES                      VARCHAR2(50)
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table
+comment on table SCM_SYS_CLIENT
+  is '客户端授权模式';
+-- Add comments to the columns
+comment on column SCM_SYS_CLIENT.CLIENTID
+  is '客户端id';
+comment on column SCM_SYS_CLIENT.CLIENTSECRET
+  is '客户端秘钥';
+comment on column SCM_SYS_CLIENT.AUTHORIZEDGRANTTYPES
+  is '授权码模式';
+comment on column SCM_SYS_CLIENT.REDIRECTURI
+  is '回调地址';
+comment on column SCM_SYS_CLIENT.ACCESSTOKENVALIDITYSECONDS
+  is 'TOKEN失效时长（秒）';
+comment on column SCM_SYS_CLIENT.REFRESHTOKENVALIDITYSECONDS
+  is 'REFRESH_TOKEN失效时长（秒）';
+comment on column SCM_SYS_CLIENT.SCOPES
+  is '作用域';

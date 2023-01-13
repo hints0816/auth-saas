@@ -54,6 +54,11 @@ public class SaasSiteDao {
         return fetch;
     }
 
+    public List<SaasSite> selectSaasSite(){
+        List<SaasSite> query = dao.query(SaasSite.class, null);
+        return query;
+    }
+
     public int updateSaasSite(SaasSite saasSite){
         int update = dao.update(saasSite);
         return update;

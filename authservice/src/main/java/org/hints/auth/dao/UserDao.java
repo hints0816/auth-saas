@@ -5,6 +5,7 @@ import org.hints.common.pojo.CusUser;
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
 import org.nutz.dao.Sqls;
+import org.nutz.dao.TableName;
 import org.nutz.dao.entity.Record;
 import org.nutz.dao.sql.Sql;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,19 @@ public class UserDao {
     public CusUser finduserByUserName(String username) {
         CusUser user = dao.fetch(CusUser.class, Cnd.where("USER_NAME","=",username));
         return user;
+    }
+
+    public CusUser finduserByUserNameComp(String username, String comp, String client_id) {
+        Sql sql = Sqls.create("SELECT * FROM $CLIENT.$SYS_USER WHERE USER_NAME = @USER_NAME");
+
+        sql.setVar("CLIENT", client_id)
+                .setVar("SYS_USER", "SYS_USER"+ comp)
+                .setParam("USER_NAME", username);
+
+        sql.setCallback(Sqls.callback.entity());
+        sql.setEntity(dao.getEntity(CusUser.class));
+        CusUser cusUser = dao.execute(sql).getObject(CusUser.class);
+        return cusUser;
     }
 
     public List<Record> getAuth(String username) {

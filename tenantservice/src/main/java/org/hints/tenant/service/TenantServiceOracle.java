@@ -124,14 +124,8 @@ public class TenantServiceOracle implements TenantService{
         for(String key : keys) {
             Sql sql = dao2.sqls().create(key);
             sql.setVar("user",clientid);
+            sql.setVar("user",client_secret);
             dao2.execute(sql);
-        }
-        Dao dao3 = new NutDao(dataSource,new FileSqlManager("sql/smcom.sqls"));
-        String[] keys3 = dao3.sqls().keys();
-        for(String key : keys3) {
-            Sql sql = dao3.sqls().create(key);
-            sql.setVar("user",clientid);
-            dao3.execute(sql);
         }
 
         Dao dao4 = new NutDao(dataSource,new FileSqlManager("sql/sys.sqls"));
@@ -145,15 +139,15 @@ public class TenantServiceOracle implements TenantService{
         String finalSecret = new BCryptPasswordEncoder().encode(client_secret);
 
         /*插入权限认证模块*/
-        SysClient sysClient = new SysClient();
-        sysClient.setClientId(clientid);
-        sysClient.setClientSecret("{bcrypt}"+finalSecret);
-        sysClient.setAuthorizedGrantTypes(authorized_grant_types);
-        sysClient.setAccessTokenValiditySeconds(accesstokenvalidityseconds);
-        sysClient.setRedirectUri(redirect_uri);
-        sysClient.setRefreshTokenValiditySeconds(refreshtokenvalidityseconds);
-        sysClient.setScopes(scopes);
-        dao.insert(sysClient);
+        Client client = new Client();
+        client.setClient_id(clientid);
+        client.setClientSecret("{bcrypt}"+finalSecret);
+        client.setAuthorizedGrantTypes(authorized_grant_types);
+        client.setAccessTokenValiditySeconds(accesstokenvalidityseconds);
+        client.setRedirectUri(redirect_uri);
+        client.setRefreshTokenValiditySeconds(refreshtokenvalidityseconds);
+        client.setScopes(scopes);
+        dao.insert(client);
 
         /*插入租户信息表*/
         SaasOracle saasOracle = new SaasOracle();

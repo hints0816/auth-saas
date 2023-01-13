@@ -1,0 +1,300 @@
+/* tenant.SYS_API_ROLE */
+create table $user.SYS_API_ROLE
+(
+  ROID       VARCHAR2(20),
+  APIURL     VARCHAR2(200) not null,
+  METHOD     VARCHAR2(20) not null,
+  TYPE       NUMBER not null,
+  TOKEN      VARCHAR2(200),
+  CREATETIME DATE not null,
+  DSCA       VARCHAR2(200),
+  ID         NUMBER not null
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  )
+/* tenant.SYS_API_ROLE.KEY */
+alter table $user.SYS_API_ROLE
+  add constraint APIROLE_ID primary key (ID)
+  using index
+  tablespace CMDB
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  )
+/* tenant.SYS_API_ROLE.sequence */
+create sequence $user.APIROLE_SEQ
+minvalue 1
+maxvalue 9999999
+start with 447
+increment by 1
+cache 20
+/* tenant.SYS_API_ROLE.trigger */
+create or replace trigger $user.APIROLE_TRIGGER
+before insert on $user.sys_api_role
+for each row
+begin
+ select APIROLE_SEQ.nextval into:New.id from dual;
+end;
+
+/* tenant.SYS_API_USER */
+create table $user.SYS_API_USER
+(
+  API_ID   NUMBER not null,
+  USERNAME VARCHAR2(20) not null
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  )
+/* tenant.SYS_API_USER.KEY */
+alter table $user.SYS_API_USER
+  add constraint FOR_APIID foreign key (API_ID)
+  references $user.SYS_API_ROLE (ID)
+/* tenant.SYS_API_USER1.KEY */
+alter table $user.SYS_API_USER
+  add constraint FOR_USERNAME foreign key (USERNAME)
+  references $user.SCM_SYS_USER (USERNAME)
+
+/* tenant.SYS_DICT_DATA */
+create table $user.SYS_DICT_DATA
+(
+  DICT_CODE   NUMBER not null,
+  DICT_SORT   NUMBER(3) default 0,
+  DICT_LABEL  VARCHAR2(100),
+  DICT_VALUE  VARCHAR2(100),
+  DICT_TYPE   VARCHAR2(100),
+  CSS_CLASS   VARCHAR2(100),
+  LIST_CLASS  VARCHAR2(100),
+  IS_DEFAULT  CHAR(1) default 'N',
+  STATUS      CHAR(1) default '0',
+  CREATE_BY   VARCHAR2(64),
+  CREATE_TIME DATE,
+  UPDATE_BY   VARCHAR2(64),
+  UPDATE_TIME DATE,
+  REMARK      VARCHAR2(500)
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  )
+/* tenant.SYS_DICT_DATA.sequence */
+create sequence $user.DICTDATA_SEQ
+minvalue 1
+maxvalue 9999
+start with 148
+increment by 1
+cache 20
+/* tenant.SYS_DICT_DATA.trigger */
+create or replace trigger $user.DICTDATA_TRIGGER
+before insert on $user.sys_dict_data
+for each row
+begin
+ select DICTDATA_SEQ.nextval into:New.dict_code from dual;
+end;
+
+/* tenant.SYS_DICT_TYPE */
+create table $user.SYS_DICT_TYPE
+(
+  DICT_ID     NUMBER not null,
+  DICT_NAME   VARCHAR2(100),
+  DICT_TYPE   VARCHAR2(100),
+  STATUS      CHAR(1) default '0',
+  CREATE_BY   VARCHAR2(64),
+  CREATE_TIME DATE,
+  UPDATE_BY   VARCHAR2(64),
+  UPDATE_TIME DATE,
+  REMARK      VARCHAR2(500)
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  )
+/* tenant.SYS_DICT_TYPE.KEY */
+alter table $user.SYS_DICT_TYPE
+  add constraint DICT_ID_PRIM primary key (DICT_ID)
+  using index
+  tablespace CMDB
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  )
+/* tenant.SYS_DICT_TYPE1.KEY */
+alter table $user.SYS_DICT_TYPE
+  add constraint DICT_NAME_UNI unique (DICT_NAME)
+  using index
+  tablespace CMDB
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  )
+/* tenant.SYS_DICT_TYPE.sequence */
+create sequence $user.DICTTYPE_SEQ
+minvalue 1
+maxvalue 9999
+start with 62
+increment by 1
+cache 20
+/* tenant.SYS_DICT_TYPE.trigger */
+create or replace trigger $user.DICTTYPE_TRIGGER
+before insert on $user.sys_dict_type
+for each row
+begin
+ select DICTTYPE_SEQ.nextval into:New.dict_id from dual;
+end;
+
+/* tenant.SYS_OPER_LOG */
+create table $user.SYS_OPER_LOG
+(
+  TITLE          VARCHAR2(50),
+  BUSINESS_TYPE  NUMBER(2) default 0,
+  METHOD         VARCHAR2(100),
+  REQUEST_METHOD VARCHAR2(10),
+  OPERATOR_TYPE  NUMBER(1) default 0,
+  OPER_NAME      VARCHAR2(50),
+  COMP           VARCHAR2(50),
+  OPER_URL       VARCHAR2(255),
+  OPER_IP        VARCHAR2(50),
+  OPER_LOCATION  VARCHAR2(255),
+  OPER_PARAM     VARCHAR2(2000),
+  JSON_RESULT    VARCHAR2(2000),
+  STATUS         NUMBER(1) default 0,
+  ERROR_MSG      VARCHAR2(2000) default ' ',
+  OPER_TIME      DATE,
+  ID             NUMBER
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  )
+/* tenant.SYS_OPER_LOG.sequence */
+create sequence $user.OPERLOG_SEQ
+minvalue 1
+maxvalue 999999
+start with 15208
+increment by 1
+cache 20
+/* tenant.SYS_OPER_LOG.trigger */
+create or replace trigger $user.OPERLOG_TRIGGER
+before insert on $user.sys_oper_log
+for each row
+begin
+ select operlog_seq.nextval into:New.id from dual;
+end;
+
+/* tenant.SYS_LOGININFOR */
+create table $user.SYS_LOGININFOR
+(
+  LOGIN_NAME     VARCHAR2(50),
+  IPADDR         VARCHAR2(50),
+  LOGIN_LOCATION VARCHAR2(255),
+  BROWSER        VARCHAR2(50),
+  OS             VARCHAR2(50),
+  STATUS         CHAR(1) default 0,
+  MSG            VARCHAR2(255),
+  LOGIN_TIME     DATE,
+  COMP           VARCHAR2(50),
+  ID             NUMBER,
+  CLIENT_ID      VARCHAR2(50)
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  )
+/* tenant.SYS_LOGININFOR.sequence */
+create sequence $user.LOGININFO_SEQ
+minvalue 1
+maxvalue 9999999
+start with 51921
+increment by 1
+cache 20
+/* tenant.SYS_LOGININFOR.trigger */
+create or replace trigger $user.LOGININFO_TRIGGER
+before insert on $user.sys_logininfor
+for each row
+begin
+ select LOGININFO_SEQ.nextval into:New.id from dual;
+end;
+/* tenant.SCM_SYS_CLIENT */
+create table $user.SCM_SYS_CLIENT
+(
+  CLIENTID                    VARCHAR2(50) not null,
+  CLIENTSECRET                VARCHAR2(200),
+  AUTHORIZEDGRANTTYPES        VARCHAR2(50) not null,
+  REDIRECTURI                 VARCHAR2(100),
+  ACCESSTOKENVALIDITYSECONDS  NUMBER(20) not null,
+  REFRESHTOKENVALIDITYSECONDS NUMBER(20) not null,
+  SCOPES                      VARCHAR2(50)
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  )

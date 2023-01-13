@@ -1,4 +1,4 @@
-package org.hints.tenant.controller;
+package org.hints.tenant.controller.saas;
 
 import org.hints.common.pojo.ReturnVo;
 import org.hints.common.pojo.SaasSite;
@@ -65,7 +65,4 @@ public class SaasSiteController {
     @GetMapping("/download")
     public void download(@RequestParam String path, HttpServletResponse response) {
     }
-
-
-
 }

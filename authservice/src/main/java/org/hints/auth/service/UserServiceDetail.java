@@ -45,9 +45,11 @@ public class UserServiceDetail implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         String client_id = "";
+        String comp = "";
         HttpServletRequest httpServletRequest = getHttpServletRequest();
         if(httpServletRequest != null){
-            client_id = httpServletRequest.getParameter("client_id").toString();
+            client_id = httpServletRequest.getParameter("client_id");
+            comp = httpServletRequest.getParameter("comp");
         }
         if(client_id.equals("scm_client")){
             CusUser user = userDao.finduserByUserName(username);
@@ -59,7 +61,7 @@ public class UserServiceDetail implements UserDetailsService {
                     .authorities(getAuthorities(username))
                     .build();
             return userDetails;
-        }else{
+        }else if(client_id.equals("saas_client")){
             SaasTenant user = sysUserSaasService.findByMobile(username);
             if(user == null){
                 throw new UsernameNotFoundException("用户不存在!");
@@ -71,21 +73,18 @@ public class UserServiceDetail implements UserDetailsService {
                     .authorities(getAuthorities(username))
                     .build();
             return userDetails;
+        }else{
+            CusUser user = userDao.finduserByUserNameComp(username,comp, client_id);
+            if(user == null){
+                throw new UsernameNotFoundException("用户不存在!");
+            }
+            CusUser userDetails = CusUser.withUsername(user.getUsername())
+                    .password(user.getPassword())
+                    .authorities(getAuthorities(username))
+                    .build();
+            return userDetails;
         }
     }
-
-//    public UserDetails loadUserByUsernameAndVerifycode(String username,String verifycode) throws UsernameNotFoundException {
-//        User user = userDao.finduser(username);
-//        if (user == null) {
-//            throw new UsernameNotFoundException("用户不存在!");
-//        }
-//        UserDetails userDetails = org.springframework.security.core.userdetails.User.withUsername(user.getUsername())
-//                .password(user.getPassword())
-//                .authorities(getAuthorities(username))
-//                .build();
-//        logger.info("verifycode:"+verifycode);
-//        return userDetails;
-//    }
 
     //查询该用户的权限集
     public Collection<? extends GrantedAuthority> getAuthorities(String username) {

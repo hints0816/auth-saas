@@ -1,0 +1,7 @@
+### Get Token
+# @name loginAdmin
+GET http://localhost:6002/oauth/token?username=admin&password=123456&comp=1673580221058720&grant_type=password&client_id=SAAS1673515934632119&client_secret=123456 HTTP/1.1
+
+### complist
+GET http://localhost:8084/user/comp/list HTTP/1.1
+Authorization: Bearer {{loginAdmin.response.body.access_token}}
