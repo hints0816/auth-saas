@@ -1,0 +1,408 @@
+-- Create table
+create table SAAS_COMMODITY
+(
+  GROUP_ID    VARCHAR2(20) not null,
+  TYPE        NUMBER,
+  GROUP_NAME  VARCHAR2(255),
+  IMAGE       VARCHAR2(255),
+  ADDON_ARRAY VARCHAR2(512),
+  UNIT        VARCHAR2(20),
+  FEE         NUMBER,
+  DSCA        VARCHAR2(2000),
+  STATUS      NUMBER default 1 not null,
+  CREATE_TIME DATE,
+  MODIFY_TIME DATE
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table
+comment on table SAAS_COMMODITY
+  is 'SAAS系统商品表';
+-- Add comments to the columns
+comment on column SAAS_COMMODITY.GROUP_ID
+  is '商品ID';
+comment on column SAAS_COMMODITY.TYPE
+  is '商品类型0:租户1:站点2:服务';
+comment on column SAAS_COMMODITY.GROUP_NAME
+  is '商品名称';
+comment on column SAAS_COMMODITY.IMAGE
+  is '商品图片';
+comment on column SAAS_COMMODITY.ADDON_ARRAY
+  is '服务';
+comment on column SAAS_COMMODITY.UNIT
+  is '单位';
+comment on column SAAS_COMMODITY.FEE
+  is '费用';
+comment on column SAAS_COMMODITY.DSCA
+  is '描述';
+comment on column SAAS_COMMODITY.STATUS
+  is '状态0:下架1:上架2:试用';
+comment on column SAAS_COMMODITY.CREATE_TIME
+  is '创建时间';
+comment on column SAAS_COMMODITY.MODIFY_TIME
+  is '修改时间';
+-- Create/Recreate primary, unique and foreign key constraints
+alter table SAAS_COMMODITY
+  add constraint GROUPKEY primary key (GROUP_ID)
+  using index
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+
+
+-- Create table
+create table SAAS_SITE
+(
+  SITE_ID      VARCHAR2(50) not null,
+  TENANT_ID    NUMBER,
+  TITLE        VARCHAR2(255),
+  LOGO         VARCHAR2(255),
+  DESA         VARCHAR2(255),
+  ADDRESS      VARCHAR2(255),
+  PHONE        VARCHAR2(255),
+  QQ           VARCHAR2(255),
+  WEIXIN       VARCHAR2(255),
+  STATUS       NUMBER,
+  CLOSE_REASON VARCHAR2(255),
+  CREATE_TIME  DATE,
+  MODIFY_TIME  DATE,
+  ADDRESS_URL  VARCHAR2(255),
+  COMPANY      VARCHAR2(255)
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table
+comment on table SAAS_SITE
+  is '站点信息表';
+-- Add comments to the columns
+comment on column SAAS_SITE.SITE_ID
+  is '站点ID';
+comment on column SAAS_SITE.TENANT_ID
+  is '租户ID';
+comment on column SAAS_SITE.TITLE
+  is '站点名称';
+comment on column SAAS_SITE.LOGO
+  is '站点图标';
+comment on column SAAS_SITE.DESA
+  is '站点简介';
+comment on column SAAS_SITE.ADDRESS
+  is '地址';
+comment on column SAAS_SITE.PHONE
+  is '联系电话';
+comment on column SAAS_SITE.QQ
+  is '微信';
+comment on column SAAS_SITE.WEIXIN
+  is 'QQ';
+comment on column SAAS_SITE.STATUS
+  is '状态';
+comment on column SAAS_SITE.CLOSE_REASON
+  is '关闭原因';
+comment on column SAAS_SITE.CREATE_TIME
+  is '创建时间';
+comment on column SAAS_SITE.MODIFY_TIME
+  is '修改时间';
+comment on column SAAS_SITE.ADDRESS_URL
+  is '站点URl';
+comment on column SAAS_SITE.COMPANY
+  is '公司名称';
+-- Create/Recreate primary, unique and foreign key constraints
+alter table SAAS_SITE
+  add constraint SAASSITE_KEY primary key (SITE_ID)
+  using index
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+
+
+-- Create table
+create table SAAS_SYS_ORACLE
+(
+  CLIENT_ID    VARCHAR2(200),
+  MOBILE       VARCHAR2(200),
+  PASSWORD     VARCHAR2(200),
+  EMAIL        VARCHAR2(200),
+  CREATE_TIME  DATE,
+  UPDATE_TIME  DATE,
+  STATUS       NUMBER,
+  SITE_NUM     NUMBER,
+  TENANT_ID    NUMBER not null,
+  MAX_SITE_NUM NUMBER,
+  GROUP_ID     VARCHAR2(200),
+  EXPIRE_TIME  DATE,
+  DOMAIN       VARCHAR2(200),
+  ID           VARCHAR2(200) not null,
+  NAME         VARCHAR2(200)
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table
+comment on table SAAS_SYS_ORACLE
+  is '租户Oracle信息';
+-- Add comments to the columns
+comment on column SAAS_SYS_ORACLE.CLIENT_ID
+  is 'ORACLE USERNAME';
+comment on column SAAS_SYS_ORACLE.MOBILE
+  is '手机号';
+comment on column SAAS_SYS_ORACLE.PASSWORD
+  is '密码';
+comment on column SAAS_SYS_ORACLE.EMAIL
+  is '邮箱';
+comment on column SAAS_SYS_ORACLE.CREATE_TIME
+  is '创建时间';
+comment on column SAAS_SYS_ORACLE.UPDATE_TIME
+  is '更新时间';
+comment on column SAAS_SYS_ORACLE.STATUS
+  is '状态';
+comment on column SAAS_SYS_ORACLE.SITE_NUM
+  is '已创建站点数量';
+comment on column SAAS_SYS_ORACLE.TENANT_ID
+  is '租户ID';
+comment on column SAAS_SYS_ORACLE.MAX_SITE_NUM
+  is '最大站点数量';
+comment on column SAAS_SYS_ORACLE.GROUP_ID
+  is '套餐ID';
+comment on column SAAS_SYS_ORACLE.EXPIRE_TIME
+  is '到期时间';
+comment on column SAAS_SYS_ORACLE.DOMAIN
+  is '主域名';
+comment on column SAAS_SYS_ORACLE.ID
+  is '唯一标识';
+comment on column SAAS_SYS_ORACLE.NAME
+  is '公司名称';
+-- Create/Recreate primary, unique and foreign key constraints
+alter table SAAS_SYS_ORACLE
+  add constraint ORACLEID primary key (ID)
+  using index
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+
+
+-- Create table
+create table SAAS_SYS_ORDER
+(
+  ORDER_NO          VARCHAR2(20) not null,
+  TENANT_ID         VARCHAR2(200),
+  OUT_TRADE_NO      VARCHAR2(20),
+  GROUP_ID          VARCHAR2(20),
+  GROUP_PERIOD_NUM  NUMBER,
+  GROUP_PERIOD_UNIT VARCHAR2(20),
+  IS_DELETE         NUMBER,
+  PAY_CERT          VARCHAR2(200),
+  PAY_CERTEX        VARCHAR2(200),
+  ORDER_STATUS      NUMBER,
+  ORDER_TYPE        NUMBER,
+  PAY_TIME          DATE,
+  CREATE_TIME       DATE,
+  PAY_TYPE          NUMBER,
+  ORDER_MONEY       NUMBER,
+  PAY_STATUS        NUMBER
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table
+comment on table SAAS_SYS_ORDER
+  is '系统订单信息';
+-- Add comments to the columns
+comment on column SAAS_SYS_ORDER.ORDER_NO
+  is '订单号';
+comment on column SAAS_SYS_ORDER.TENANT_ID
+  is '租户ID';
+comment on column SAAS_SYS_ORDER.OUT_TRADE_NO
+  is '支付流水号';
+comment on column SAAS_SYS_ORDER.GROUP_ID
+  is '套餐id';
+comment on column SAAS_SYS_ORDER.GROUP_PERIOD_NUM
+  is '套餐单位周期数量';
+comment on column SAAS_SYS_ORDER.GROUP_PERIOD_UNIT
+  is '套餐单位';
+comment on column SAAS_SYS_ORDER.IS_DELETE
+  is '是否删除';
+comment on column SAAS_SYS_ORDER.PAY_CERT
+  is '付款凭证';
+comment on column SAAS_SYS_ORDER.PAY_CERTEX
+  is '付款凭证说明';
+comment on column SAAS_SYS_ORDER.ORDER_STATUS
+  is '订单状态(0:通过1:拒绝2:关闭)';
+comment on column SAAS_SYS_ORDER.ORDER_TYPE
+  is '订单类型(0:新购1:续费2:升级3:退款)';
+comment on column SAAS_SYS_ORDER.PAY_TIME
+  is '付款时间';
+comment on column SAAS_SYS_ORDER.CREATE_TIME
+  is '创建时间';
+comment on column SAAS_SYS_ORDER.PAY_TYPE
+  is '付款方式';
+comment on column SAAS_SYS_ORDER.ORDER_MONEY
+  is '金额';
+comment on column SAAS_SYS_ORDER.PAY_STATUS
+  is '支付状态(0:未支付1:已支付)';
+-- Create/Recreate primary, unique and foreign key constraints
+alter table SAAS_SYS_ORDER
+  add constraint ORDERKEY primary key (ORDER_NO)
+  using index
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+
+
+-- Create table
+create table SAAS_SYS_TENANT
+(
+  SYS_UID      VARCHAR2(200) not null,
+  CLIENT_ID    VARCHAR2(200),
+  MOBILE       VARCHAR2(200),
+  PASSWORD     VARCHAR2(200),
+  EMAIL        VARCHAR2(200),
+  CREATE_TIME  DATE,
+  UPDATE_TIME  DATE,
+  STATUS       NUMBER,
+  SITE_NUM     NUMBER,
+  TENANT_ID    NUMBER not null,
+  MAX_SITE_NUM NUMBER,
+  IS_TENANT    NUMBER,
+  GROUP_ID     VARCHAR2(200),
+  EXPIRE_TIME  DATE,
+  DOMAIN       VARCHAR2(200)
+)
+tablespace CMDB
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table
+comment on table SAAS_SYS_TENANT
+  is '租户信息';
+-- Add comments to the columns
+comment on column SAAS_SYS_TENANT.SYS_UID
+  is '登录账号';
+comment on column SAAS_SYS_TENANT.CLIENT_ID
+  is 'ORACLE USERNAME';
+comment on column SAAS_SYS_TENANT.MOBILE
+  is '手机号';
+comment on column SAAS_SYS_TENANT.PASSWORD
+  is '密码（暂不编码）';
+comment on column SAAS_SYS_TENANT.EMAIL
+  is '邮箱';
+comment on column SAAS_SYS_TENANT.CREATE_TIME
+  is '创建时间';
+comment on column SAAS_SYS_TENANT.UPDATE_TIME
+  is '更新时间';
+comment on column SAAS_SYS_TENANT.STATUS
+  is '状态';
+comment on column SAAS_SYS_TENANT.SITE_NUM
+  is '已创建站点数量';
+comment on column SAAS_SYS_TENANT.TENANT_ID
+  is '租户ID';
+comment on column SAAS_SYS_TENANT.MAX_SITE_NUM
+  is '最大站点数量';
+comment on column SAAS_SYS_TENANT.IS_TENANT
+  is '是否租户';
+comment on column SAAS_SYS_TENANT.GROUP_ID
+  is '套餐ID';
+comment on column SAAS_SYS_TENANT.EXPIRE_TIME
+  is '到期时间';
+comment on column SAAS_SYS_TENANT.DOMAIN
+  is '主域名';
+-- Create/Recreate primary, unique and foreign key constraints
+alter table SAAS_SYS_TENANT
+  add constraint TANENTKEY primary key (TENANT_ID)
+  using index
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+alter table SAAS_SYS_TENANT
+  add constraint MOBILEKEY unique (MOBILE)
+  using index
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
