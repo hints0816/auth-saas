@@ -17,6 +17,8 @@ public class SaasSite extends BaseEntity
     @Name
     private String site_id;
 
+    private String oracleId;
+
     @Column(hump = true)
     private String tenantId;
 

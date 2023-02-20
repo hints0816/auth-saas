@@ -47,20 +47,21 @@ public class SiteServiceImpl implements SiteService {
     public ReturnVo createSite(SaasSite saasSite) {
         String tenantId = SecurityUtil.getJwtInfo().getUser_id().toString();
 
-        SaasOracle saasOracle = saasOracleDao.selectSaasOracleById(tenantId);
+        SaasOracle saasOracle = saasOracleDao.selectSaasOracleById(saasSite.getOracleId());
         if (saasOracle.getSiteNum() >= saasOracle.getMaxSiteNum()) {
             return ReturnVo.error();
         }
 
         /*生成站点uuid*/
         String siteId = UUIDUtil.getNumberUUID();
-        int i = saasOracleDao.updateSiteNumSaasOracle(saasSite.getTenantId());
+        int i = saasOracleDao.updateSiteNumSaasOracle(saasSite.getOracleId());
 
         /*Saas系统：添加站点基本信息*/
         DataSourceContext.setDBType(saasOracle.getClientId());
         saasSite.setCreate_time(LocalDateTime.now());
         saasSite.setSite_id(siteId);
         saasSite.setStatus(1L);
+        saasSite.setTenantId(tenantId);
         saasSiteDao.insertSaasSite(saasSite);
 
         return ReturnVo.success(siteId);
@@ -116,11 +117,11 @@ public class SiteServiceImpl implements SiteService {
     @Override
     public TablePageData<SaasSite> selectSiteListOnUser(SaasSite saasSite) {
         String tenantId = SecurityUtil.getJwtInfo().getUser_id().toString();
-        List<SaasOracle> saasOracles = saasOracleDao.querySaasOracleByIdAndTenantId(tenantId, saasSite.getTenantId());
+        List<SaasOracle> saasOracles = saasOracleDao.querySaasOracleByIdAndTenantId(tenantId, saasSite.getOracleId());
         if (saasOracles.size() == 0) {
             return null;
         }
-        SaasOracle saasOracle = saasOracleDao.selectSaasOracleById(saasSite.getTenantId());
+        SaasOracle saasOracle = saasOracleDao.selectSaasOracleById(saasSite.getOracleId());
         DataSourceContext.setDBType(saasOracle.getClientId());
         TablePageData tablePageData = saasSiteDao.selectSaasSiteList(saasSite);
         return tablePageData;

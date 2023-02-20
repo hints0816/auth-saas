@@ -67,7 +67,7 @@ GET http://localhost:8084/entity/1673513456897265 HTTP/1.1
 Authorization: Bearer {{loginAdmin.response.body.access_token}}
 
 ### site query
-GET http://localhost:8084/site/list?tenantId=1673515935230921 HTTP/1.1
+GET http://localhost:8084/site/list?oracleId=1673515935230921 HTTP/1.1
 Authorization: Bearer {{loginAdmin.response.body.access_token}}
 
 ### site fetch
@@ -80,7 +80,7 @@ Authorization: Bearer {{loginAdmin.response.body.access_token}}
 content-type: application/json
 
 {
-    "tenantId": "1673515935230921",
+    "oracleId": "1673515935230921",
     "title": "测试",
     "company": "测试",
     "desa": "1",
@@ -106,11 +106,8 @@ content-type: application/json
     "phone": "18088888888",
     "qq": "123",
     "weixin": "123",
-    "status": 1,
-    "closeReason": null,
-    "modify_time": null,
     "addressUrl": null,
-    "company": "123"
+    "company": "1233"
 }
 
 ### site close
